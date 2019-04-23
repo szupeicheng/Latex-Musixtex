@@ -1,2 +1,2 @@
 # Latex-Musixtex
-Write piano sheet using Musixtex
+Write piano sheets using Musixtex
