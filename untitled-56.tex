@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage{stackengine}
+\usepackage{musixtex}
+\input musixlyr
+\input musixdbr
+%\usepackage[paperheight=9in,paperwidth=6in]{geometry}
+%\usepackage[paperheight=12in,paperwidth=8in]{geometry}
+%\usepackage[letterpaper]{geometry}%
+\usepackage[a5paper]{geometry}
+%\usepackage[letterpaper]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[pages=some]{background}
+\newcommand\BackImage[2][scale=1]{%
+\BgThispage
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,  %% adjust
+%contents={\includegraphics[width=\paperwidth,height=\paperheight]{img01}}
+contents={\includegraphics[#1]{#2}}
+}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand*{\vertchar}[2][0pt]{%
+  \tikz[
+    inner sep=1pt,
+    shorten >=-.15ex,
+    shorten <=-.15ex,
+    line cap=round,
+    baseline=(c.base),
+  ]\draw
+    (0,0) node (c) {#2}
+    ($(c.north)+(#1,0)$) -- ($(c.north)+(#1,0)$);%
+}
+
+
+\makeatletter
+
+\makeatother
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+\newcommand*{\pehinbsiit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{-2pt}\raisebox{2.5pt}{\begin{rotate}{-35}\small\ttfamily\char'15\end{rotate}}}{#1}}
+\newcommand*{\pehinsfit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehinrmit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2.5pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\pehinbf}[1]{\stackinset{c}{}{b}{5.5pt}{\ttfamily\char'15}{#1}}
+\newcommand*{\pehinup}[1]{\stackinset{c}{}{b}{7pt}{\small\ttfamily\char'15}{#1}}
+
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrit}{\hspace{.7pt}\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrbf}{\raisebox{3.5pt}{$\scalebox{.5}{$\bullet$}$}}
+
+
+\begin{document}
+\pagenumbering{gobble} 
+%\pagenumbering{arabic}
+
+%\vspace*{1in}
+%\oddsidemargin=0pt
+\voffset=-10mm
+\vsize=180mm
+%\hoffset=-25.4mm
+%{\centering G\'{O}A \^{E} SIM, L\'{I} TI\pehinup{O}H O-L\'{O} CH\'{U}\\}
+\hspace{15mm}
+%\hoffset=-6.4mm
+Thi\`{a}{\nn} h\={o}{\dtr} l\'{a}n ch\={u}-ch\pehin{\i}p ch\`{o} ch\pehin{\i}t-h\'{o}e\\
+%THI\`{A}{\nn} H\={O}{\dtr} L\'{A}N CH\={U}-CH\pehin{I}P CH\`{O} CH\pehin{I}T-H\'{O}E\\
+%\begin{center}G\'{O}A \^{E} SIM, L\'{I} TI\pehinup{O}H O-L\'{O} CH\'{U}\end{center}
+
+\begin{music}
+\setstaffs{1}{2}%
+\setclef{1}{60}%
+\indivbarrules 
+\sepmultibarrule{1}
+%\setsize{1}{1}
+%\setlyrics{alto}{Si\={u} Ch\'{u} si\pehin{o}k{\lyrhyphenchar} h\^{o}e, si\={u} Ch\'{u} i{\lyrhyphenchar} t\={\i}, Ta{\nn} l\'{a}n ch\pehin{\i}t ch\^{o}e l\^{a}i si\`{a}u{\lyrhyphenchar} li\={a}m I, Pi\'{a}u{\lyrhyphenchar} b\^{e}ng Ki\`{u}{\lyrhyphenchar} ch\'{u} th\`{o}e l\'{a}n {\empty} si\={u}{\lyrhyphenchar} s\'{\i}, K\`{a}u I {\empty} koh l\^{a}i.}%
+%\setlyrics{alto1}{Si\={u} Ch\'{u} si\pehin{o}k-h\^{o}e, si\={u} Ch\'{u} i-t\={\i}, Ta{\nn} l\'{a}n ch\pehin{\i}t ch\^{o}e l\^{a}i si\`{a}u-li\={a}m I, Pi\'{a}u-b\^{e}ng Ki\`{u}-ch\'{u} th\`{o}e l\'{a}n {\empty} si\={u}-s\'{\i}, K\`{a}u I {\empty} koh l\^{a}i.}%
+
+\setlyrics{alto}{Thi\`{a}{\nn} h\={o}{\dtr} l\'{a}n ch\={u}-ch\pehin{\i}p ch\`{o} ch\pehin{\i}t-h\'{o}e, Thi\`{a}{\nn} h\={o}{\dtr} l\'{a}n ch\={u}-ch\pehin{\i}p ch\`{o} ch\pehin{\i}t-h\'{o}e. Si\={o}ng-t\`{e} \^{e} thi\`{a}{\nn} h\={o}{\dtr} l\'{a}n t\={a}i-ke chi\^{a}{\nn}-ch\`{o}e ch\pehin{\i}t-th\'{e}, Thi\`{a}{\nn} h\={o}{\dtr} l\'{a}n ch\={u}-ch\pehin{\i}p ch\`{o} ch\pehin{\i}t-h\'{o}e.}
+
+
+\setlyrics{soprano}{L\'{a}n t\={a}i-ke khui chh\`{u}i t\={o}a{-} sia{\nn} chhi\`{u}{\nn}, H\={o}{\dtr} Ch\'{u} \^{e} thi\`{a}{\nn} t\`{u}i l\'{a}n khai-s\'{\i}, T\={a}i-ke chhi\'{u} khan chhi\'{u}, h\={o}{\dtr} ch\^{o}an s\`{e}-k\`{a}i l\'{o}ng {\empty} chai, Thi\`{a}{\nn} h\={o}{\dtr} l\'{a}n ch\={u}-ch\pehin{\i}p ch\`{o} ch\pehin{\i}t-h\'{o}e.}
+
+\assignlyricsmulti{1}{2}{alto,soprano}
+%\assignlyrics{1}{alto,soprano}
+%\setlyrics{soprano}{G\'{o}a \^{e} sim, l\'{\i} ti\pehin{o}h o-l\'{o} Ch\'{u}, }%5 1 2 3 2 1 2 6
+%\auxlyr{\assignlyrics{1}{soprano}}
+%\lyrraise{1}{b-5pt}
+\lyrraisemulti{1}{2}{b-3pt}
+\interstaff{15}
+%\smallmusicsize
+\stafftopmarg5pt
+\nobarnumbers
+%\raggedbottom
+\parindent 0pt
+\hsize=110mm
+\generalsignature{3}
+\generalmeter{\meterfrac44}
+%\setstaffs{1}{2}
+%\setclef{1}{\bass\treble}
+\startpiece
+%\startextract
+%\Notes\cu{cd}\en\bar
+%\Notes\qu{e}\notes\cu{ee}\qu{ff}\en\bar
+%\Notes\hu{.e}\cu{ee}\en\bar
+%\NOtes\qu{'a}\cu{aa}\qu{ca}\en\bar
+%\NOtes\hu{'.b}\cu{cb}\en\alaligne%\bar
+%\Notes\qu{'ab}\cu{ccba}\en\bar
+%\Notes\qu{f}\cu{fg}\qu{'a}\en
+%\zalaligne\notes\cu{gf}\en\xbar
+%\Notes\qu{e}\cu{'aa}\qu{`g'b}\en\xbar%\alaligne
+%\notes\hu{.h}\en\mulooseness=0%\setdoubleBAR
+\Notes\qp\nextstaff\cu{cd}\en\bar
+\Notes\zhl{H}\hl{a**}\zhl{K}\hl{a}\nextstaff\zhl{c}\qu{e}\cu{ee}\zhl{d}\qu{ff}\en\bar
+\Notes\zhl{.H}\hl{.a}\zqu{G}\qu{L}\nextstaff\zhu{.c}\hu{.e}\zql{b}\cu{ee}\en\bar
+\NOtes\zhu{F}\hu{M}\sk\sk\zhl{I}\qu{a'F}\nextstaff\zhl{c}\qu{h}\cu{hh}\zhl{^d}\qu{jh}\en\bar
+\NOtes\zhl{'.E}\hl{.G}\zql{E}\ql{G}\nextstaff\zhu{=.d}\hu{.i}\zqu{e}\cu{j}\zqu{d}\cu{i}\en\alaligne%\bar
+\Notes\zwh{'A}\hu{E*=G}\nextstaff\zhu{c}\qu{'ab}\zhu{`e}\cu{'ccba}\en\bar
+%\Notes\zhl{K}\hl{a}\sk\sk\zhl{K}\hl{a}\nextstaff\zql{d}\qu{f}\roffset{1.5}{\zqu{d}\cu{f}}\zqu{e}\cu{g}\zqu{f}\qu{'a}\en
+\Notes\zhl{K}\hl{a}\sk\sk\zhl{K}\hl{a}\nextstaff\zql{d}\qu{f}\roffset{1}{\zqu{d}\cu{f}}\roffset{.5}{\zqu{e}\cu{g}}\roffset{1}{\zqu{f}\qu{'a}}\en
+\zalaligne\notes\nextstaff\zqu{e}\cu{g}\zqu{d}\cu{f}\en\xbar
+\Notes\zhl{L}\hl{a**}\zhl{L}\qu{b'G}\nextstaff\zhl{c}\qu{e}\cu{hh}\zhl{d}\qu{gi}\en\bar%\alaligne
+\notes\hu{.L}\nextstaff\zhu{.c}\hu{.h}\en\mulooseness=0%\setdoubleBAR
+%\Notes\zhl{c}\qu{e}\cu{ee}\zhl{d}\qu{ff}\en\bar
+%\Notes\zhu{.c}\hu{.e}\zql{b}\cu{ee}\en\bar
+%\NOtes\zhl{c}\qu{'a}\cu{aa}\zhl{`^d}\qu{'ca}\en\bar
+%\NOtes\zhu{=.d}\hu{'.b}\zqu{`e}\cu{'c}\zqu{`d}\cu{'b}\en\alaligne%\bar
+%\Notes\zhu{c}\qu{'ab}\zhu{`e}\cu{'ccba}\en\bar
+%\Notes\zql{d}\qu{f}\zqu{d}\cu{f}\zqu{e}\cu{g}\zqu{f}\qu{'a}\en
+%\zalaligne\notes\zqu{e}\cu{g}\zqu{d}\cu{f}\en\xbar
+%\Notes\zhl{c}\qu{e}\cu{'aa}\zhl{`d}\qu{g'b}\en\xbar%\alaligne
+%\notes\zhu{.c}\hu{.h}\en\mulooseness=0%\setdoubleBAR
+%\Notes\qu{'ba}\en\bar
+%\NOtes\qu l\qu k\qu j\en\bar
+%\Notes\qu{gi}\en\bar
+%\Notes\hu{.a}\en\bar
+%\Notes\cu{'c`g'abc}\en\bar
+%\Notes\qu{'.d.c}\en\bar
+%\Notes\qu{'.c.c}\en\bar
+%\Notes\cu{'cba}\qu{.b}\en\bar
+%\Notes\cu{'c`g'aba`g}\en\bar
+%\endextract
+\Endpiece
+\end{music}
+
+
+\end{document}
