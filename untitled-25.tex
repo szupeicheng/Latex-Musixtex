@@ -1,0 +1,732 @@
+\documentclass{article}
+\usepackage{stackengine}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[a5paper]{geometry}
+%\usepackage[a5paper, inner=2cm,outer=2.8cm, twoside, bottom=3.2cm]{geometry}
+%\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+\usepackage{pdfpages}
+
+
+
+%\newwrite\file
+%\immediate\openout\file=myfilename.txt
+%\immediate\write\file{A line of text to write to the file}
+%\immediate\write\file{Another line of text to write to the file}
+%\closeout\file
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand*{\vertchar}[2][0pt]{%
+  \tikz[
+    inner sep=1pt,
+    shorten >=-.15ex,
+    shorten <=-.15ex,
+    line cap=round,
+    baseline=(c.base),
+  ]\draw
+    (0,0) node (c) {#2}
+    ($(c.north)+(#1,0)$) -- ($(c.north)+(#1,0)$);%
+}
+
+
+\makeatletter
+\newcommand{\dotr}[1]{%
+  \mathpalette\@dotr{#1}%
+}
+
+\newcommand*{\@dotr}[2]{%
+  % #1: math style (\displaystyle, ..., \scriptscriptstyle)
+  % #2: argument of \dotr
+  \sbox0{$\m@th#1#2$}%
+  \usebox{0}%
+  % simulating a superscript
+  %\raisebox{\dimexpr\ht0-\height}{$\m@th#1\addvbuffer[-1ex 0.9ex]{.}}%
+  \raisebox{3.5pt}{$\m@th#1\@smallbullet#1\bullet$}%
+  \kern\scriptspace
+}
+\newcommand*{\@smallbullet}[2]{%
+  \scalebox{.3}{$\m@th#1#2$}%
+}
+\makeatother
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+\newcommand*{\pehinbsiit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{-2pt}\raisebox{2.5pt}{\begin{rotate}{-35}\small\ttfamily\char'15\end{rotate}}}{#1}}
+\newcommand*{\pehinsfit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehinrmit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2.5pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\pehinbf}[1]{\stackinset{c}{}{b}{5.5pt}{\ttfamily\char'15}{#1}}
+
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrit}{\hspace{.7pt}\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrbf}{\raisebox{3.5pt}{$\scalebox{.5}{$\bullet$}$}}
+
+
+
+\begin{document}
+\pagenumbering{gobble} 
+\pagenumbering{arabic}
+%\begin{landscape}
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}A\end{center}
+\noindent
+A-men Si\={o}ng \hfill 519- 523 \newline
+A-pek-l\={a}n \^{e} Si\={o}ng-t\`{e} \hfill 56 \newline
+An-hioh Ch\'{u}-j\pehin{\i}t t\={e}-it h\'{o} \hfill 209 \newline
+An-ji\^{a}n koh k\`{e} ch\pehin{i}t l\'{e}-p\`{a}i \hfill 380 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}B\end{center}
+\noindent
+B\={a}n-kok b\={a}n-l\^{a}ng l\'{o}ng \={u} ch\pehin{\i}t-p\'{a}i \hfill 321 \newline
+Ban-kun \^{e} Ch\'{u}, Ch\`{\i}-s\`{e}ng \^{e} chh\`{u} \hfill 25 \newline
+B\={a}n-m\pehin{\i}h kng-b\^{e}ng k\pehin{e}k b\'{\i}-l\={e} \hfill 68 \newline
+B\={a}n-m\pehin{\i}h sa{\nn}-kap ch\={u}-ch\pehin{\i}p hoa{\nn}-h\'{\i} \hfill 66 \newline
+B\'{e}-ch\={o} l\={a}i Eng-j\^{\i} \hfill 78 \newline
+B\^{e}-l\={o}{\dtr} \^{e} l\^{a}ng ti\pehin{o}h ki\^{a}{\nn} t\`{o}-t\'{n}g \hfill 478 \newline
+Beh k\`{a}u Pek-l\={\i}-h\^{e}ng l\={o}a h\={n}g ? \hfill 387 \newline
+Beh kh\`{\i} kh\`{u}n, si\={u}{\nn} t\pehin{a}k h\={a}ng un-s\`{u} \hfill 374 \newline
+B\'{\i}-bi\={a}u Ch\'{u} I\^{a}-so{\dtr} \hfill 149 \newline
+B\^{o}-h\={a}n \^{e}ng-kng kap o-l\'{o} \hfill 106 \newline
+B\^{o} ki\^{a}{\nn} ph\'{a}i{\nn}-l\^{a}ng t\={o}-l\={o}{\dtr} \hfill 1 \newline
+B\pehin{o}k-chi\'{a} m\^{\i}-s\^{\i} kh\`{a}n-si\'{u} i\^{u}{\nn}-k\^{u}n \hfill 87 \newline
+B\^{u} s\'{\i} b\^{u} chiong \^{e} kng \hfill 268 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}CH\end{center}
+\noindent
+Ch\={a}-\`{a}m Thi{\nn}-p\={e} si-un p\'{o}-h\={o}{\dtr} \hfill 364 \newline
+Ch\'{a}-s\^{\i} I\^{u}-th\`{a}i ch\`{e}ng s\`{o}e-ki\'{a}{\nn} \hfill 403 \newline
+Ch\'{a} t\={\i} T\={a}i-p\pehin{\i}t \^{o}ng \^{e} si\^{a}{\nn}-nih \hfill 77 \newline
+Ch\={a}i-ch\'{a} Si\={o}ng-t\`{e} b\pehin{e}k-s\={\i} S\`{e}ng-keng \hfill 221 \newline
+Ch\={a}i-ch\'{a} Si\={o}ng-t\`{e} chhe-khi\'{a}n thi{\nn}-s\`{a}i \hfill 85 \newline
+Ch\={a}i-ch\'{a} t\={\i} S\^{u}n-si\^{a}{\nn} \hfill 128 \newline
+Che s\={\i} kng-b\^{e}ng \^{e} j\pehin{\i}t \hfill 207 \newline
+Ch\`{e}ng s\`{e}ng-t\^{o}{\dtr} ti\pehin{o}h kh\`{o}a{\nn} Ch\'{u} \^{e}ng-kng \hfill 135 \newline
+Ch\={\i}-ch\={u}i kui Ch\'{u} chit-p\^{e}ng \hfill 327 \newline
+Ch\`{\i}-chun \^{e} Ch\'{u}-ch\'{a}i{\nn}, Si\={o}ng-t\`{e} s\={\i} S\`{e}ng \hfill 172 \newline
+Ch\`{\i}-chun Si\={o}ng-t\`{e} ch\`{\i} j\^{\i}n-\`{a}i \hfill 199 \newline
+Ch\`{\i}-h\'{o} p\^{e}ng-i\'{u} chi\={u}-s\={\i} I\^{a}-so{\dtr} \hfill 275 \newline
+Ch\`{\i}-ko\^{a}n \^{e} Ch\'{u} ch\`{o}e g\'{o}a \^{e} kng \hfill 9 \newline
+Ch\`{\i}-ko\^{a}n \^{e} Ch\'{u} go\'{a}n \`{a}i k\'{a}m-si\={a} \hfill 29 \newline
+Ch\`{\i}-ko\^{a}n thi{\nn}-t\'{e}ng I\^{a}-so{\dtr} ch\={e}-\={u}i \hfill 95 \newline
+Ch\`{\i}-s\`{e}ng ch\`{\i}-ko\^{a}n Si\={o}ng-t\`{e} \hfill 177 \newline
+Ch\`{\i}-s\`{e}ng \^{e} P\={e} hoa{\nn}-h\'{\i} \^{e} kng \hfill 376 \newline
+Ch\`{\i}-s\`{e}ng \^{e} S\^{\i}n ! Thia{\nn} go\'{a}n k\^{\i}-t\'{o} \hfill 159 \newline 
+Ch\`{\i}-s\`{e}ng \^{e} Thi{\nn}-p\={e} ki\^{u} L\'{\i} \`{a}{\nn}-\pehin{o}h thia{\nn} \hfill 263 \newline
+Ch\`{\i}-s\`{e}ng E{\nn}-\'{a}, khiam-pi E{\nn}-\'{a} \hfill 386 \newline
+Ch\`{\i}-s\`{e}ng Ki\`{u}-ch\'{u} ch\={o}e-j\^{\i}n p\^{e}ng-i\'{u} \hfill 256 \newline
+Ch\`{\i}-s\`{e}ng Thi{\nn}-p\={e} go\'{a}n k\'{a}m-si\={a} L\'{\i} \hfill 515 \newline
+Ch\`{\i}-t\={o}a Si\={o}ng-t\`{e} go\={a}n L\'{\i} chh\={o}a g\'{o}a \hfill 297 \newline
+Chin Ch\'{u} Si\={o}ng-t\`{e} ch\={o} thi{\nn}-t\={o}e \hfill 63 \newline
+Ch\pehin{\i}t-j\pehin{\i}t kang-ti\^{a}{\nn} ta{\nn} kiat-sok \hfill 375 \newline
+Chit-s\^{\i} l\'{e}-p\`{a}i teh-beh soah \hfill 516 \newline
+Chit-s\^{\i} ti\pehin{o}h chi\={u} I\^{a}-so{\dtr} \hfill 193 \newline
+Ch\pehin{\i}t-tih ch\pehin{\i}t tih \^{e} ch\'{u}i \hfill 416 \newline
+Ch\={o}-h\`{o}a \^{e} S\^{\i}n ! L\'{\i} t\={\i} ch\'{a}-s\^{\i} \hfill 157 \newline
+Cho\^{a}n-l\^{e}ng Ch\`{\i}-chun \^{e} S\^{\i}n ! \hfill 429 \newline
+Cho\^{a}n-l\^{e}ng \^{e} Thi{\nn}-p\={e}, thia{\nn} go\'{a}n k\^{\i}-t\'{o} \hfill 496 \newline
+Cho\^{a}n-l\^{e}ng Thi{\nn}-p\={e} s\={\i} b\={a}n p\`{u}-\={u} \hfill 224 \newline
+Cho\^{a}n-l\^{e}ng t\pehin{o}k-it \^{e} O\^{n}g \hfill 53 \newline
+Cho\^{a}n-t\={o}e l\'{o}ng ti\pehin{o}h \`{n}g I\^{a}-h\^{o}-hoa \hfill 32 \newline
+Ch\'{u} ah, ch\'{a}-s\^{\i} L\'{\i} chhi\'{u} \={u} l\pehin{a}t \hfill 448 \newline
+Ch\'{u} ah, ch\={\i}-ch\={u}i \={o}e than ki\`{a}-kha \hfill 4 \newline
+Ch\'{u} ah, ta{\nn} chi\`{a}u L\'{\i} \^{e} \={o}e th\'{a}u-p\`{a}ng L\'{\i} \^{e} l\^{o}{\dtr}-p\pehin{o}k \hfill 518 \newline
+Ch\^{u}-\`{a}i \^{e} P\={e}, s\'{o}{\dtr} thi\`{a}{\nn} \^{e} Ch\'{u} \hfill 286 \newline
+Ch\'{u} beh chin ki\`{u} t\={a}ng-ch\={o}e-j\^{\i}n \hfill 467 \newline
+Ch\'{u} beh koh l\^{a}i, Ch\'{u} beh koh l\^{a}i \hfill 425 \newline
+Ch\'{u} ch\={e} chhi\`{a}n-l\={a}n s\'{o}{\dtr}-ch\={a}i \hfill 421 \newline
+Ch\'{u} chi\={u}{\nn}-thi{\nn} t\={a}i-ke kh\`{o}a{\nn}-k\`{\i}{\nn} \hfill 137 \newline
+Ch\'{u} \^{e} hok-im chin t\={o}-l\'{\i} \hfill 335 \newline
+Ch\'{u} \^{e} thi\`{a}{\nn}-th\`{a}ng hiah t\={o}a \hfill 116 \newline
+Ch\'{u} g\'{o}a i\'{a}u \={u} kh\`{u}i-l\pehin{a}t \^{e} s\^{\i} \hfill 437 \newline
+Ch\'{u} ! g\'{o}a ta{\nn} chi\={u}-k\={u}n \`{a}i k\`{\i}{\nn} L\'{\i} \^{e} b\={\i}n \hfill 218 \newline
+Ch\'{u} hoa{\nn}-h\'{\i} thia{\nn} l\^{a}ng k\^{\i}-t\'{o} \hfill 266 \newline
+Ch\'{u} I\^{a}-h\^{o}-hoa ch\`{\i}-chun ch\`{\i}-t\={o}a \hfill 169 \newline
+Ch\'{u} I\^{a}-h\^{o}-hoa L\'{\i} ch\={o} \^{e} m\pehin{\i}h \hfill 48 \newline
+Ch\'{u} I\^{a}-h\^{o}-hoa, Sek-an \={u} l\^{a}ng \hfill 22 \newline
+Ch\'{u} I\^{a}-h\^{o}-hoa s\`{e}ng-ch\'{\i} l\pehin{\i}p-ti\={a}{\nn} \hfill 122 \newline
+Ch\'{u} I\^{a}-h\^{o}-hoa s\={\i} g\'{o}a B\pehin{o}k-chi\'{a} \hfill 6 \newline
+Ch\'{u} I\^{a}-h\^{o}-hoa, thi{\nn} beh chheng-ch\`{a}n \hfill 26 \newline
+Ch\'{u} I\^{a}-so{\dtr} \^{e} s\`{o}e-ki\'{a}{\nn} \hfill 409 \newline
+Ch\'{u} I\^{a}-so{\dtr}, g\'{o}a beh o\'{a}-kh\`{o} L\'{\i} \hfill 247 \newline
+Ch\'{u} I\^{a}-so{\dtr} p\`{a}ng-sak L\'{\i} p\'{o}-ch\={o} bi\'{a}n-li\^{u} \hfill 102 \newline
+Ch\'{u} I\^{a}-so{\dtr} sim k\pehin{e}k ch\^{u}-pi \hfill 410 \newline
+Ch\'{u} I\^{a}-so{\dtr} t\={\i} thi{\nn} ch\={e} \={u}i \hfill 422 \newline
+Ch\'{u} I\^{a}-so{\dtr} t\`{u}i thi{\nn} k\`{a}ng-l\^{\i}m \hfill 411 \newline
+Ch\'{u}-j\pehin{\i}t-\pehin{o}h \^{e} h\pehin{a}k-seng \hfill 414 \newline
+Ch\'{u}, ki\^{u} L\'{\i} l\^{\i}n-b\'{\i}n g\'{o}a \hfill 242 \newline
+Ch\'{u} ko\`{a}n-k\`{o}{\dtr} t\={o}e, k\`{a}ng-l\pehin{o}h h\={o}{\dtr}-ch\'{u}i \hfill 23 \newline
+Ch\'{u} koh-o\pehin{a}h ! Ha-le-lu-iah ! \hfill 126 \newline
+Ch\'{u} k\'{o}ng, N\={a} beh ch\`{o}e g\'{o}a h\pehin{a}k-seng \hfill 309 \newline
+Ch\'{u} kh\'{u}n-ki\^{u} L\'{\i} l\^{\i}n-b\'{\i}n go\'{a}n \hfill 495 \newline
+Ch\'{u}, L\'{\i} \^{e}ng-kng chhiong-m\'{o}a thi{\nn} \hfill 362 \newline
+Ch\'{u} L\'{\i} ki\^{o}ng-ch\`{o}ng chin-s\pehin{\i}t chheng-kh\`{\i} \hfill 442 \newline
+Ch\'{u} L\'{\i} seng-khu th\`{o}e g\'{o}a si\={u} siong phah-ph\`{o}a \hfill 219 \newline
+Ch\^{u}-pi thi\`{a}{\nn}-th\`{a}ng t\={o}a J\^{\i}n-kun \hfill 251 \newline
+Ch\'{u} s\'{o}{\dtr} h\={o}{\dtr} go\'{a}n ch\pehin{\i}t j\pehin{\i}t ta{\nn} k\`{e}-kh\`{\i} \hfill 371 \newline
+Ch\'{u} s\'{o}{\dtr} thi\`{a}{\nn} \^{e} g\'{\i}n-n\'{a} \hfill 424 \newline
+Ch\'{u} s\`{u} \'{e}ng-o\pehin{a}h b\'{\i}-ni\^{u} \hfill 182 \newline
+Ch\'{u} teh ki\`{o} l\'{a}n l\^{a}ng \hfill 415 \newline
+Ch\'{u} thi\`{a}m g\'{o}a sim-l\={a}i b\^{o} kia{\nn}-hi\^{a}{\nn} ch\={u}-ch\={a}i \hfill 279 \newline
+Ch\'{u} thia{\nn} go\'{a}n k\^{\i}-t\'{o} \hfill 497 \newline 
+Ch\'{u} t\={o}a un-h\={u}i n\={a} si-l\pehin{o}h t\={\i} g\'{o}a it-seng \hfill 485 \newline
+Ch\'{u} \={u} kh\`{u}i-l\pehin{a}t i-h\'{o} \hfill 447 \newline
+Ch\'{u} \={u} un-ti\'{a}n t\={o}a ch\^{u}-pi \hfill 383 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}CHH\end{center}
+\noindent
+Chheng-ch\'{a} sim-s\^{\i}n kap j\pehin{\i}t p\^{\i}{\nn}-kh\'{\i} \hfill 361 \newline
+Chheng-li\^{a}n \^{e} h\'{o} b\pehin{o}k-chi\'{a} \hfill 435 \newline
+Chheng-sim \^{e} \={u} hok-kh\`{\i} \hfill 248 \newline
+Chhi\'{a}{\nn} kh\`{o}a{\nn} Ki\`{u}-ch\'{u} \^{e}ng-i\={a}u Kun-\^{o}ng \hfill 136 \newline
+Chhi\'{a}{\nn} kh\`{o}a{\nn} si\={a}n-li\^{o}ng ch\^{u}-pi B\pehin{o}k-chi\'{a} \hfill 213 \newline
+Chhi\'{a}{\nn} l\^{a}i,  chhi\'{a}{\nn} l\^{a}i \'{I}-m\'{a}-l\={o}e-l\={\i} \hfill 143 \newline
+Chhi\'{a}{\nn} l\^{a}i ! L\'{a}n ti\pehin{o}h \`{n}g I\^{a}-h\^{o}-hoa \hfill 493 \newline
+Chhi\'{a}{\nn} l\^{a}i tiong-s\`{\i}n s\`{e}ng-t\^{o}{\dtr} \hfill  92 \newline
+Chhi\'{a}{\nn} l\'{a}n t\={a}i-ke t\={o}a-sia{\nn} chhi\`{u}{\nn}-koa \hfill 170 \newline
+Chhi\'{a}{\nn} thia{\nn} thi{\nn}-s\`{a}i hoa{\nn}-h\'{\i} \^{e} sia{\nn} \hfill 83 \newline
+Chh\`{u} n\={a} \={m}-s\={\i} Ch\'{u} kap l\'{a}n kh\'{\i} \hfill 45 \newline
+Chhun-thi{\nn} chi\'{a}u-chiah l\'{o}ng hoa{\nn}-h\'{\i} \hfill 394 \newline
+Chhut-j\pehin{\i}t l\pehin{o}h h\={o}{\dtr} s\={\i} Ch\'{u} s\'{o}{\dtr} t\={e}ng \hfill 312 \newline 
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}E\end{center}
+\noindent
+E\^{n}g-kng kui Ch\`{\i}-ko\^{a}n \^{e} Ch\'{u} \hfill 502 \newline
+E\^{n}g-kng kui S\`{e}ng P\={e} Si\={o}ng-t\`{e} E\^{n}g-kng S\`{e}ng Ki\'{a}{\nn} \hfill 507 \newline
+E\^{n}g-kng kui S\`{e}ng P\={e} Si\={o}ng-t\`{e} \hfill 499 \newline
+E\^{n}g-kng kui t\={\i} S\`{e}ng P\={e} Si\={o}ng-t\`{e} \hfill 52 \newline
+E\'{n}g-o\'{a}n kap Ch\'{u} khi\={a}-kh\'{\i} \hfill 355 \newline
+E\'{n}g-o\'{a}n teh chi\'{a}ng-ko\'{a}n \'{u}-ti\={u} \^{e} Si\={o}ng-t\`{e} \hfill 316 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}G\end{center}
+\noindent
+G\'{\i}n-n\'{a} ti\pehin{o}h l\^{a}i g\^{\i}m-si \hfill 423 \newline
+G\'{o}a \`{a}i \pehin{o}h Ch\'{u} \^{e} kho\'{a}n-sit \hfill 412 \newline
+G\'{o}a \`{a}i ti\^{a}u-k\`{\i}{\nn} Thi{\nn}-p\={e} \^{e} b\={\i}n \hfill 280 \newline
+G\'{o}a b\pehin{a}k ki\pehin{a}h kh\'{\i} \`{n}g thi{\nn} \hfill 64 \newline
+G\'{o}a bat thun-l\'{u}n th\`{e}ng-h\={a}u Si\={o}ng-t\`{e} \hfill 13 \newline
+G\={o}a-b\={\i}n phah m\^{n}g s\={\i} ch\={\i}-ch\={u}i ? \hfill 472 \newline
+G\'{o}a ch\^{e}ng n\'{a} i\^{u}{\nn} sit-b\^{e} \hfill 245 \newline
+G\'{o}a chin \`{a}i k\'{o}ng che k\`{o}{\dtr}-s\={u} \hfill 204 \newline
+G\'{o}a ch\`{o}e I\^{a}-so{\dtr} \^{e} i\^{u}{\nn}-ko \hfill 399 \newline
+G\'{o}a ch\`{o}e I\^{a}-so{\dtr} \^{e} ki\'{a}{\nn}-j\^{\i} \hfill 408 \newline
+G\'{o}a ch\={o}e k\pehin{e}k t\={a}ng b\={o}e tit the-s\^{\i} \hfill 241 \newline
+G\'{o}a ch\`{o}e Ki-tok peng-teng \hfill 331 \newline
+G\'{o}a Ch\'{u} g\'{o}a Ki\`{u}-ch\'{u} g\'{o}a chin \`{a}i tit o\^{a}n-cho\^{a}n \hfill 476 \newline
+G\'{o}a Ch\'{u} I\^{a}-h\^{o}-hoa L\'{\i} \^{e} mi\^{a} s\={\i} Ch\`{\i}-s\`{e}ng \hfill 36 \newline
+G\'{o}a Ch\'{u} k\`{o}{\dtr}-hiong N\'{a}-sat-l\pehin{e}k \hfill 98 \newline
+G\'{o}a \^{e} b\pehin{a}k-chiu beh ki\pehin{a}h ko\^{a}n l\^{a}i \`{n}g soa{\nn} \hfill 42 \newline
+G\'{o}a \^{e} Ki\`{u}-ch\'{u} k\`{a}ng-seng Pek-l\={\i}-h\^{e}ng si\^{a}{\nn} \hfill 457 \newline
+G\'{o}a \^{e} s\`{\i}{\nn}-mi\={a} hi\`{a}n h\={o}{\dtr} L\'{\i} \hfill 306 \newline
+G\'{o}a \^{e} sim-s\^{\i}n l\'{\i} ti\pehin{o}h chhi\`{u}{\nn}-koa \hfill 69 \newline
+G\'{o}a \^{e} s\`{\i}n-sim n\={a} b\^{o} ti\={a}{\nn} \hfill 461 \newline
+G\'{o}a \^{e} Si\={o}ng-t\`{e} g\'{o}a \^{e} kun-\^{o}ng \hfill 47 \newline
+G\'{o}a him-b\={o}{\dtr} chin-l\'{\i} \^{e} S\^{\i}n \hfill 155 \newline
+G\'{o}a him-b\={o}{\dtr} Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} \hfill 284 \newline
+G\'{o}a j\={\i}n Ki\`{u}-ch\'{u} b\^{o} kia{\nn} ki\`{a}n-si\`{a}u \hfill 254 \newline
+G\'{o}a ki\^{a}{\nn} b\^{e}-l\={o}{\dtr} I\^{a}-so{\dtr} k\={u}n-o\'{a} \hfill 194 \newline
+G\'{o}a l\^{a}i chhin-k\={u}n I\^{a}-so{\dtr} \hfill 398 \newline
+G\'{o}a l\^{a}i ti\^{a}u-k\`{\i}{\nn} L\'{\i} ki\`{u}-si\pehin{o}k g\'{o}a \^{e} Ch\'{u} \hfill 152 \newline
+G\'{o}a n\'{a} chhut-g\={o}a l\^{a}ng-kheh \hfill 234 \newline
+G\'{o}a n\={a} tham-lo\^{a}n s\`{e}-kan hok-kh\`{\i} \hfill 265 \newline
+G\'{o}a o-l\'{o} Thi{\nn}-p\={e} \hfill 454 \newline
+G\'{o}a o\pehin{a}h s\={\i} \={u}i Ki-tok \hfill 305 \newline
+G\'{o}a sim bi\'{a}n gi\^{a}u-g\^{\i} \hfill 140 \newline
+G\'{o}a sim choan-b\={u} th\`{e}ng-h\={a}u Si\={o}ng-t\`{e} \hfill 20 \newline
+G\'{o}a sim chun-k\`{e}ng g\'{o}a Ch\'{u} ch\`{o}e t\={o}a \hfill 344 \newline
+G\'{o}a sim gi\'{o}ng-b\={o}ng s\pehin{\i}p-j\={\i} p\'{o}-k\`{e} \hfill 115 \newline
+G\'{o}a sim k\`{e}ng-thi\`{a}{\nn} Ch\'{u} I\^{a}-h\^{o}-hoa \hfill 40 \newline
+G\'{o}a sim k\={u}n-o\'{a} si-un p\'{o}-ch\={o} \hfill 260 \newline
+G\'{o}a sim o-l\'{o} ch\`{\i}-ko\^{a}n Si\={o}ng-t\`{e} \hfill 71 \newline
+G\'{o}a sim o-l\'{o} Si\={o}ng-t\`{e} \hfill 67 \newline
+G\'{o}a sim-s\^{\i}n ti\pehin{o}h hoa{\nn}-h\'{\i} kh\'{\i}-l\^{a}i \hfill 223 \newline
+G\'{o}a sim s\pehin{\i}t-ch\={a}i o-l\'{o} \hfill 35 \newline
+G\'{o}a sim su-si\'{u}{\nn} h\'{o} t\={o}e \hfill 359 \newline
+G\'{o}a sim su-si\'{u}{\nn} thi{\nn}-t\'{e}ng h\'{o} t\={o}e \hfill 354 \newline
+G\'{o}a sim t\={o}a hoa{\nn}-h\'{\i} Ch\'{u} ti\`{a}m sin-pi{\nn} \hfill 480 \newline
+G\'{o}a sim t\={o}a hoa{\nn}-h\'{\i} g\'{o}a \^{e} chh\`{u}i ti\pehin{o}h g\^{\i}m-si \hfill 282 \newline
+G\'{o}a s\`{\i}n cho\^{a}n-l\^{e}ng Si\={o}ng-t\`{e} \hfill 55 \newline
+G\'{o}a s\'{o}{\dtr} chhin-\`{a}i \^{e} ch\`{e}ng hia{\nn}-t\={\i} \hfill 74 \newline
+G\'{o}a sui \={o}e k\'{o}ng b\={a}n kok im-g\'{u} \hfill 314 \newline
+G\'{o}a ta{\nn} choan-sim pek-chhiat k\^{\i}-t\'{o} \hfill 272 \newline
+G\'{o}a ta{\nn} kh\`{n}g l\'{\i}n ti\pehin{o}h hi\`{a}n ka-k\={\i} \hfill 304 \newline
+G\'{o}a ta{\nn} l\^{a}i o\'{a} Ch\'{u} L\'{\i} b\={\i}n-ch\^{e}ng \hfill 222 \newline
+G\'{o}a ta{\nn} s\pehin{\i}t-ch\={a}i bi\'{a}n koh siong-pi \hfill 130 \newline
+G\'{o}a ti\`{a}m t\={\i} Ch\'{u} \^{e} thi\`{a}{\nn}-th\`{a}ng \hfill 348 \newline
+G\'{o}a t\`{u}i ch\={o}e-ok ka{\nn}-l\^{o} thoat-l\={\i} \hfill 252 \newline
+G\'{o}a t\`{u}i chhim-chhim h\={a}m-khi{\nn} \hfill 46 \newline
+G\'{o}a thia{\nn} I\^{a}-so{\dtr} \^{e} sia{\nn} k\'{o}ng-b\^{e}ng \hfill 190 \newline
+G\'{o}a \={u} ch\`{\i} h\'{o} p\^{e}ng-i\'{u} \hfill 285 \newline
+G\'{o}a \={u} P\'{o}-h\={o}{\dtr}-chi\'{a} t\={\i} sin-pi{\nn} \hfill 255 \newline
+G\'{o}a \={u} thia{\nn} hok-im chin sia{\nn} \hfill 468 \newline
+G\'{o}a \`{a}i Si\={o}ng-t\`{e} s\`{e}ng-ti\={a}n \hfill 178 \newline
+Go\={a}n Ch\'{u} chhun L\'{\i} s\`{e}ng-chhi\'{u} \hfill 249 \newline
+Go\={a}n Ch\'{u} p\'{o}-h\={o}{\dtr} l\'{a}n a\={u}-h\={o}e \={u} k\^{\i} \hfill 446 \newline
+Go\={a}n Ch\'{u} Si\={o}ng-t\`{e} chi\'{a}ng-ko\^{a}n \hfill 60 \newline
+Go\={a}n Ch\'{u} s\`{u}-hok p\'{o}-h\={o}{\dtr} l\'{\i} \hfill 513 \newline
+Go\={a}n Ch\'{u} ti\`{a}m go\'{a}n tiong-kan \hfill 180 \newline
+Go\'{a}n \^{e} Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} \hfill 277 \newline
+Go\'{a}n \^{e} Thi{\nn}-p\={e} Si\={o}ng-t\`{e}, chi\`{a}u-k\`{o}{\dtr} go\'{a}n k\`{e} \`{a}m-m\^{\i} \hfill 366 \newline
+Go\={a}n g\'{o}a n\'{a} ki\^{a}{\nn} kap Ch\'{u} n\'{a} o\'{a} \hfill 271 \newline
+Go\={a}n g\'{o}a \={o}e n\'{a} thi\`{a}{\nn} L\'{\i}, g\'{o}a Ch\'{u} Ki-tok \hfill 338 \newline
+Go\={a}n l\'{a}n Ki\`{u}-ch\'{u} I\^{a}-so{\dtr}  Ki-tok \hfill 512 \newline
+Go\'{a}n l\^{a}i chi\={u}-k\={u}n li\pehin{a}t-ch\'{o}{\dtr} Si\={o}ng-t\`{e} \hfill 163 \newline
+Go\'{a}n l\^{o}e chh\^{a}n i\={a} h\'{o} ch\'{e}ng-ch\'{\i} \hfill 300 \newline
+Go\'{a}n P\={e} Si\={o}ng-t\`{e} ch\={e} thi{\nn}-t\'{e}ng \hfill 270 \newline
+Go\={a}n P\={e} Si\={o}ng-t\`{e} chit-s\^{\i} k\`{a}ng-l\^{\i}m \hfill 225 \newline
+Go\={a}n t\={a}i-ke o-l\'{o} Si\={o}ng-t\`{e} \hfill 57 \newline
+Go\'{a}n ta{\nn} koh-ch\`{a}i ch\={u}-ch\pehin{\i}p l\^{a}i chia \hfill 441 \newline
+Go\'{a}n t\^{a}ng-sim \={u}i chit l\^{a}ng ch\={u}-ch\pehin{\i}p \hfill 227 \newline
+Go\'{a}n ta{\nn} t\={\i} Ch\'{u} s\`{e}ng-ti\={a}n \hfill 226 \newline
+Go\'{a}n \={u}i b\={a}n-b\^{\i}n ki\^{u} Ch\'{u} chi\`{a}u-k\`{o}{\dtr} \hfill 430 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}H\end{center}
+\noindent
+Ha-le-lu-iah ! I \={u} koh-o\pehin{a}h \hfill 127 \newline
+Ha-le-lu-iah ! Kau-chi\`{a}n b\^{e}ng-p\pehin{e}k kh\'{o}{\dtr}-l\={a}n l\'{o}ng soah \hfill 125 \newline
+Ha-le-lu-iah ! Si\={o}ng-t\`{e} ki\'{a}{\nn}-j\^{\i} ti\pehin{o}h l\^{a}i g\^{\i}m-s\={\i} \hfill 124 \newline
+H\pehin{a}k-b\={u}n \^{e} l\^{a}ng t\'{o}a t\`{\i}-sek \hfill 413 \newline
+H\pehin{e}k-s\={\i} i\`{a}-si\={a}n h\pehin{e}k-s\={\i} iu-b\={u}n \hfill 196 \newline
+Hi\`{a}n g\'{o}a chheng-li\^{a}n cheng-s\^{\i}n \hfill 436 \newline
+Hoa{\nn}-h\'{\i} Ki\`{u}-ch\'{u} ch\`{o}e O\^{n}g \hfill 132 \newline
+H\'{o}-t\'{a}{\nn}, h\'{o}-t\'{a}{\nn} j\={\i}n Ki-tok \hfill 333 \newline
+H\={o}{\dtr} thong s\`{e}-k\`{a}i t\pehin{a}k s\'{o}{\dtr}-ch\={a}i l\'{o}ng g\^{\i}m k\'{o}ng \hfill 404 \newline
+Hok-im cheng-sia{\nn} teh t\={o}a t\^{a}n \hfill 464 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}I\end{center}
+\noindent
+\'{I}-sek-li\pehin{a}t ch\pehin{o}k l\'{\i} ti\pehin{o}h chi\`{a}u s\^{e}ng-s\pehin{\i}t k\'{o}ng \hfill 44 \newline
+I\^{a}-h\^{o}-hoa ch\'{a}-kh\'{\i}-s\^{\i} L\'{\i} \={o}e thia{\nn} g\'{o}a \^{e} sia{\nn} \hfill 363 \newline
+I\^{a}-h\^{o}-hoa g\'{o}a kian-k\`{o}{\dtr} chi\pehin{o}h-p\^{o}a{\nn} \hfill 475 \newline
+I\^{a}-l\={o}{\dtr}-sat-l\'{e}ng \^{n}g-kim si\^{a}{\nn} \hfill 352 \newline
+I\^{a}-so{\dtr} chin-chi\`{a}{\nn} s\'{\i} koh-o\pehin{a}h \hfill123 \newline
+I\^{a}-so{\dtr} chin-o\pehin{a}h Si\={o}ng-t\`{e} \hfill 121 \newline
+I\^{a}-so{\dtr} ch\`{o}e l\'{a}n B\pehin{o}k-chi\'{a} \hfill 141 \newline
+I\^{a}-so{\dtr} chun-mi\^{a} j\pehin{\i}p g\'{o}a h\={\i}-khang \hfill 151 \newline
+I\^{a}-so{\dtr} \^{e} chhi\'{u} h\^{u}-chh\^{\i}  g\'{o}a \hfill 456 \newline
+I\^{a}-so{\dtr} go\^{a}n-p\'{u}n s\={\i} Si\={o}ng-t\`{e} \hfill 103 \newline
+I\^{a}-so{\dtr} i\'{a}u chh\={o}a-l\={o}{\dtr} \hfill 298 \newline
+I\^{a}-so{\dtr} Ki-tok h\pehin{a}k-seng \hfill 329 \newline
+I\^{a}-so{\dtr} p\'{o}-k\`{u}i \^{e} mi\^{a} \hfill 142 \newline
+I\^{a}-so{\dtr} s\`{e}ng-h\={o}e chi\`{a}u hoat-t\={o}{\dtr} \hfill 228 \newline
+I\^{a}-so{\dtr} s\`{e}ng-h\={o}e  Si\={o}ng-t\`{e}  siat-l\pehin{\i}p \hfill 166 \newline
+I\^{a}-so{\dtr} seng-khu th\`{o}e l\'{a}n t\`{e}ng s\`{\i} \hfill 215 \newline
+I\^{a}-so{\dtr} s\={\i} go\'{a}n sim so{\dtr} hoa{\nn}-h\'{\i} \hfill 259 \newline
+I\^{a}-so{\dtr} si\={u}-kh\'{o}{\dtr} t\`{\i} chh\`{\i} bi\'{a}n-li\^{u} \hfill 133 \newline
+I\^{a}-so{\dtr} ti\`{a}u g\'{o}a l\^{a}i ki\^{a}{\nn} thi{\nn}-l\={o}{\dtr} \hfill 296 \newline
+I\^{a}-so{\dtr} thi\`{a}{\nn} g\'{o}a, g\'{o}a chai b\^{e}ng \hfill 397 \newline
+I\^{a}-so{\dtr} thi\`{a}{\nn} g\'{o}a, I\^{a}-so{\dtr} thi\`{a}{\nn} g\'{o}a \hfill 402 \newline
+I\^{a}-so{\dtr} thi\`{a}{\nn} l\^{a}ng un-ti\'{a}n kek-g\={o}e \hfill 200 \newline
+Iok-t\`{a}n h\^{o}-pi{\nn} Iok-h\={a}n k\'{o}ng-b\^{e}ng \hfill 99 \newline
+I\'{o}ng-k\'{a}m kian-k\`{o}{\dtr} s\`{e}ng-t\^{o}{\dtr} \hfill 295 \newline
+It-chh\`{e} \^{e}ng-kng b\pehin{o}h kui h\={o}{\dtr} go\'{a}n \hfill 39 \newline
+Iu-b\={u}n s\`{e}-kan s\={\i} b\^{e}-l\={o}{\dtr} \hfill 473 \newline
+I\^{u}{\nn}-ko ch\={e} t\={\i} p\'{o}-ch\={o} \hfill 134 \newline
+I\^{u}{\nn} k\`{a}u-ch\pehin{a}p-k\`{a}u t\'{o}-teh p\^{e}ng-an \hfill 463 \newline
+
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}J\end{center}
+\noindent
+J\^{\i}n-seng hong-pho ji\'{a}u-t\={o}ng b\^{o} th\^{e}ng \hfill 310 \newline
+J\pehin{\i}t chhi\^{a} sai-soa{\nn} go\={a}n Ch\'{u} L\'{\i} kap g\'{o}a t\`{o}a \hfill 368 \newline
+J\pehin{\i}t go\pehin{a}t j\^{u} so n\'{a} ch\'{u}i teh l\^{a}u \hfill 381 \newline
+J\pehin{\i}t l\pehin{o}h sai-soa{\nn} \`{a}m t\`{a} soa{\nn}-ni\'{a} \hfill 372 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}K\end{center}
+\noindent
+Kau-chi\`{a}n b\={e}ng-p\pehin{e}k kh\'{o}{\dtr}-l\={a}n l\'{o}ng soah \hfill 125 \newline
+K\`{e}-sit tit si\`{a}, ch\={o}e tit jia-kh\`{a}m \hfill 10 \newline
+K\'{e}ng-g\={u} h\'{o} ph\'{a}i{\nn} s\={\i} Ch\'{u} s\'{o}{\dtr} ti\={a}{\nn} \hfill 346 \newline
+Keng-k\`{e} chit j\pehin{\i}t tit Ch\'{u} in-chh\={o}a \hfill 377 \newline
+K\^{\i}-bi\={a}u Kun-\^{o}ng g\'{o}a Ch\'{u} I\^{a}-so{\dtr} \hfill 301 \newline
+K\^{\i}-t\'{o} \^{e} s\^{\i} chit-s\^{\i} k\pehin{e}k h\'{o} \hfill 267 \newline
+Ki-tok ch\`{o}e l\'{a}n kian-k\`{o}{\dtr} t\={o}e-ki \hfill 164 \newline
+Ki-tok k\`{a}ng-s\`{e} hit chit s\^{\i} \hfill 89 \newline
+Ki-tok s\={\i} l\'{a}n ka-t\^{e}ng \^{e} Ch\'{u} \hfill 431 \newline
+K\`{\i}{\nn}-n\={a} j\pehin{\i}t-kng s\'{o}{\dtr} chi\`{o} \^{e} \={u}i \hfill 188 \newline
+K\`{\i}{\nn}-n\={a} sim-koa{\nn} chheng-kh\`{\i} \^{e} l\^{a}ng \hfill 24 \newline
+K\`{\i}{\nn}-n\={a} \={u} l\^{a}ng h\={o}{\dtr} ch\={o}e kh\'{o}{\dtr}-chh\'{o}{\dtr} \hfill 197 \newline
+K\`{\i}{\nn}-n\={a} \={u} l\^{a}ng iu-b\={u}n sion-pi \hfill 460 \newline
+Ki\pehin{a}h b\pehin{a}k l\^{a}i kh\`{o}a{\nn} Thi{\nn}-p\={e} s\`{e}ng-soa{\nn} \hfill 187 \newline
+Ki\'{a}m \={u} p\^{e}ng-an? S\`{e}-kan \={u} t\={o}a kan-l\^{a}n \hfill 323 \newline
+Kim-j\pehin{\i}t s\={\i} Ch\'{u} siat-l\pehin{\i}p ch\`{o}e s\`{e}ng \hfill 206 \newline
+Kim-j\pehin{\i}t t\={a}i-ke ch\={u}-ch\pehin{\i}p hoa{\nn}-h\'{\i} \hfill 232 \newline
+Ki\`{u}-ch\'{u} ch\={e} h\={u}n chh\`{a}n-l\={a}n l\^{\i}m-k\`{a}u \hfill 144 \newline
+Ki\^{u} Ch\'{u} chiong L\'{\i} \^{e} \={o}e khek-ti\^{a}u t\={\i} go\'{a}n sim \hfill 501 \newline
+Ki\^{u} Ch\'{u} chh\={o}a g\'{o}a kap L\'{\i} t\^{a}ng ki\^{a}{\nn} \hfill 307 \newline
+Ki\`{u}-ch\'{u} chhut sia{\nn}  ki\`{o} g\'{o}a \hfill 120 \newline
+Ki\`{u}-ch\'{u} g\'{o}a \`{a}i chi\={u} L\'{\i} \hfill 287 \newline
+Ki\`{u}-ch\'{u} g\'{o}a chhin-k\={u}n L\'{\i} \hfill 281 \newline
+Ki\`{u}-ch\'{u} g\'{o}a si\`{a}u-li\={a}m L\'{\i} \^{e} s\^{\i} \hfill 302 \newline
+Ki\`{u}-ch\'{u} go\={a}n L\'{\i} ch\`{o}e g\'{o}a B\pehin{o}k-chi\'{a} \hfill 400 \newline
+Ki\^{u} Ch\'{u} h\`{u}n-heng K\`{a}u-h\={o}e \hfill 168 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} b\={a}n-hok p\'{u}n-go\^{a}n \hfill 250 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} chheng-li\^{a}n p\^{e}ng-i\'{u} \hfill 439 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} g\'{\i}n-n\'{a} p\^{e}ng-i\'{u} \hfill 417 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} g\'{o}a l\pehin{\i}p-ch\`{\i} \hfill 313 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} go\={a}n L\'{\i} l\^{a}i thia{\nn} \hfill 479 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} k\`{a}ng-seng hit m\^{\i} \hfill 88 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} Ki-tok, E\'{n}g ch\`{o}e b\={a}n \^{o}ng \^{e} O\^{n}g \hfill 332 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} Ki-tok, Ki\`{u} l\'{a}n thoat-l\={\i} \hfill 104 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} k\^{\i}-bi\={a}u \^{e} mi\^{a} \hfill 311 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} thi\`{a}{\nn} s\`{o}e-ki\'{a}{\nn} \hfill 395 \newline
+Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} \={u} b\={a}n ko\^{a}n-l\^{e}ng \hfill 205 \newline
+Ki\`{u}-ch\'{u} 
+Ki\^{u} Ch\'{u} k\`{a}-s\={\i} go\'{a}n k\^{\i}-t\'{o} \hfill 261 \newline
+Ki\^{u} Ch\'{u} kap go\'{a}n t\`{o}a \hfill 378 \newline
+Ki\`{u}-ch\'{u} k\'{o}-ji\^{a}n t\={\i} g\'{o}a sim-l\={a}i \hfill 345 \newline
+Ki\`{u}-ch\'{u} koh-o\pehin{a}h \^{e} ch\'{a}-kh\'{\i} \hfill 131 \newline
+Ki\`{u}-ch\'{u} khui-l\={o}{\dtr} koh siat hoat-t\={o}{\dtr} \hfill 269 \newline
+Ki\^{u} Ch\'{u} khui go\'{a}n \^{e} sim-b\pehin{a}k \hfill 500 \newline
+Ki\^{u} Ch\'{u} si t\={o}a-un \hfill 274 \newline
+Ki\^{u} Ch\'{u} Si\={o}ng-t\`{e} si t\={o}a-un \hfill 283 \newline
+Ki\`{u}-ch\'{u} t\={\i} h\^{u}n-b\={o}ng l\={a}i \hfill 459 \newline
+Ki\`{u}-ch\'{u} th\`{a}n g\'{o}a sim i\'{a}u i\`{u}-ch\'{\i}{\nn} \hfill 440 \newline
+Ki\`{u}-ch\'{u} thi\`{a}{\nn}-th\`{a}ng \^{e} sia{\nn} \hfill 201 \newline
+Ki\^{u} Si\={o}ng-t\`{e} hoat-chhut L\'{\i} \^{e} kng \hfill 15 \newline
+Koh k\`{e} ch\pehin{\i}t j\pehin{\i}t s\^{\i}-khek p\^{e}ng-an \hfill 369 \newline
+K\`{o}{\dtr}-i\^{u}{\nn} \^{e} t\'{u}-ti\pehin{o}h thi{\nn}-s\`{a}i \hfill 390 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}KH\end{center}
+\noindent
+Khek-se-m\'{a}-n\^{\i} hoe-h\^{n}g l\={a}i-b\={\i}n \hfill 108 \newline
+Khi\={a}-kh\'{\i} ch\`{\i}-ko\^{a}n \'{u}n-b\pehin{a}t s\'{o}{\dtr}-ch\={a}i \hfill 28 \newline 
+Kho-h\pehin{a}k k\={\i}-l\^{e}ng l\^{\i}n-b\'{\i}n ch\^{u}-\`{a}i \hfill 318 \newline
+Kh\'{o}-sioh g\'{o}a sim o{\dtr}-\`{a}m \hfill 239 \newline
+Kh\`{o}a{\nn} Eng-j\^{\i} t\={\i} b\'{e}-ch\^{o}-l\={a}i \hfill 97 \newline
+Kh\`{o}a{\nn} S\`{e}ng Ki\'{a}{\nn} t\={\i} b\'{e}-ch\^{o} l\={a}i \hfill 81 \newline
+Kh\'{u}n-ki\^{u} ch\`{\i}-chun \^{e} Thi{\nn} P\={e} \hfill 230 \newline
+Kh\'{u}n-ki\^{u} Ki\`{u}-ch\'{u} t\`{u}i g\'{o}a k\'{o}ng b\^{e}ng \hfill 262 \newline
+Kh\'{u}n-ki\^{u} S\`{e}ng S\^{\i}n k\'{a}m-t\={o}ng go\'{a}n sim \hfill 156 \newline
+Kh\'{u}n-ki\^{u} S\`{e}ng S\^{\i}n k\`{a}ng-l\^{\i}m \hfill 158 \newline
+Kh\'{u}n-ki\^{u} S\`{e}ng S\^{\i}n t\`{u}i thi{\nn}  k\`{a}ng-l\^{\i}m \hfill 154 \newline
+Kh\'{u}n-ki\^{u} Si\={o}ng-t\`{e} l\^{\i}m-b\'{\i}n \hfill 179 \newline
+Kh\'{u}n-ki\^{u} Si\={o}ng-t\`{e} pang-ch\={a}n \hfill 428 \newline
+Kh\'{u}n-ki\^{u} Si\={o}ng-t\`{e} si-un s\`{u}-hok \hfill 433 \newline
+Kh\'{u}n-ki\^{u} Thi{\nn}-p\={e} b\pehin{o}h-tit k\'{o}a{\nn} g\'{o}a \hfill 19 \newline
+Kh\'{u}n-ki\^{u} Thi{\nn}-p\={e} kap go\'{a}n t\`{o}a \hfill 273 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}L\end{center}
+\noindent
+L\'{a}n \^{e} sim-s\^{\i}n ti\pehin{o}h thi\^{a}m-ch\={e}ng \hfill 326 \newline
+L\'{a}n ki\^{a}{\nn} s\`{e}-kan \^{e} l\={o}{\dtr} \hfill 186 \newline
+L\'{a}n l\^{a}ng beh ki\^{a}{\nn} thi{\nn}-l\={o}{\dtr} \hfill 289 \newline
+L\'{a}n l\^{a}ng ka-k\={\i} si\^{o}ng-s\`{e} m\={n}g \hfill 244 \newline
+L\'{a}n l\^{a}ng k\`{\i}-ji\^{a}n t\`{o}a ch\={o}e chhut-s\`{\i} \hfill 212 \newline
+L\'{a}n l\^{a}ng s\`{\i}{\nn}-mi\={a} b\^{o} ti\={a}{\nn}-ti\pehin{o}h \hfill 233 \newline
+L\'{a}n l\^{a}ng t\={\i} t\={o}e-b\={\i}n-chi\={u}{\nn} \hfill 150 \newline
+L\'{a}n l\^{a}ng ti\`{a}m chit s\`{e}-kan \hfill 325 \newline
+L\'{a}n ta{\nn} chit-ti\pehin{a}p beh sa{\nn} l\={\i}-khui \hfill 445 \newline
+L\'{a}n ti\pehin{o}h chhut hoa{\nn}-h\'{\i} \^{e} sia{\nn} \hfill 299 \newline
+L\'{a}n ti\pehin{o}h k\'{a}m-si\={a} Ch\'{u} I\^{a}-h\^{o}-hoa \hfill 31 \newline
+L\'{a}n ti\pehin{o}h s\`{\i}n-kh\`{o} Si\={o}ng-t\`{e} \hfill 343 \newline
+L\^{a}ng-l\^{a}ng l\'{o}ng chin un-kh\^{u}n \hfill 451 \newline
+L\^{a}ng n\={a} kiat-li\^{a}n t\={\i} Ch\'{u} I\^{a}-so{\dtr} \hfill 174 \newline
+L\^{a}ng t\`{u}i g\'{o}a k\'{o}ng, Ta{\nn} l\'{a}n l\^{a}i kh\`{\i} \hfill 43 \newline
+L\={a}u-b\'{u} ch\'{a} chh\={o}a ki\'{a}{\nn}-j\^{\i} \hfill 432 \newline
+L\'{\i} ki\'{a}m \={u} chi\={u}-k\={u}n Ch\'{u} h\={o}{\dtr} I s\'{o}e chheng-kh\`{\i} \hfill 469 \newline
+L\'{\i} n\={a} kam-go\={a}n h\={o}{\dtr} Si\={o}ng-t\`{e} \'{\i}n-chh\={o}a \hfill 258 \newline
+L\'{\i} n\={a} khi\`{a}m-kheh chin sit-b\={a}ng \hfill 317 \newline
+Li\pehin{a}t-pang si\'{a}{\nn}-s\={u} lo\={a}n -lo\={a}n soan-hoa \hfill 2 \newline
+L\'{\i}n ti\pehin{o}h chheng-si\={a} Ch\'{u} I\^{a}-h\^{o}-hoa \hfill 37 \newline
+L\'{\i}n ti\pehin{o}h gi\'{o}ng-b\={o}ng Ch\'{u} \hfill xx \newline
+L\'{\i}n ti\pehin{o}h k\'{a}m-si\={a} Ch\'{u} I\^{a}-h\^{o}-hoa \hfill 41 \newline
+L\'{\i}n ti\pehin{o}h t\`{u}i Ch\'{u} chhut sia{\nn} g\^{\i}m-si \hfill 49 \newline
+L\pehin{u}t-hoat ti\^{a}u-k\`{a}i th\^{a}u ch\pehin{\i}t \^{e} \hfill 243 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}M\end{center}
+\noindent
+M\'{a}-n\'{a} t\pehin{a}k-j\pehin{\i}t \={u} k\`{a}ng-l\pehin{o}h \hfill 340 \newline
+M\^{\i}-j\pehin{\i}t ch\'{\i}-\={u} s\`{\i}n-kh\`{o} Ch\'{u} \hfill 474 \newline
+M\'{u}i ch\'{a}-kh\'{\i} l\'{a}n ti\pehin{o}h t\`{\i}-\`{\i} \hfill 365 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}N\end{center}
+\noindent
+N\'{a} l\pehin{o}k teh t\pehin{\i}t-t\pehin{\i}t ch\'{a}u \hfill 14 \newline
+\`{N}g I\^{a}-h\^{o}-hoa l\^{a}i chhi\`{u}{\nn} sin koa \hfill 33 \newline
+Ngi\^{a}-chih kho\`{a}i-l\pehin{o}k ch\'{a}-kh\'{\i} \hfill 129 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}O\end{center}
+\noindent
+O-l\'{o} cho\^{a}n-l\^{e}ng \^{e} Ch\'{u} Si\={o}ng-t\`{e} \hfill 72 \newline
+O-l\'{o} Ch\'{u} I\^{a}-h\^{o}-hoa \hfill 181 \newline
+O-l\'{o} chheng-h\={o}{\dtr} Ch\'{u} I\^{a}-h\^{o}-hoa \hfill 3 \newline
+O-l\'{o} \^{e}ng-kng chun-k\`{u}i \'{\i}-k\pehin{\i}p ko\^{a}n-s\`{e} \hfill 148 \newline
+O-l\'{o} kui t\={\i} Ch\'{u} Ki-tok \hfill 503 \newline
+O-l\'{o} T\={a}i-p\pehin{\i}t \^{e} h\={o}{\dtr}-\`{e} \hfill 145 \newline
+O-l\'{o} Si\={o}ng-t\`{e} ch\`{\i} ko\^{a}n ch\`{\i} chun \hfill 511 \newline
+O-l\'{o} Thi{\nn}-p\={e} b\={a}n-kok p\'{u}n-go\^{a}n \hfill 509 \newline
+O-l\'{o} thi{\nn}-t\'{e}ng Ch\'{u}-ch\'{a}i{\nn} \hfill 510 \newline
+O\pehin{a}h-mi\={a} \^{e} pi\'{a}{\nn} \={u}i l\^{\i}n-b\'{\i}n peh-ph\`{o}a \hfill 216 \newline
+}
+\newpage
+\begin{center}T\pehin{a}k S\'{\i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}P\end{center}
+\noindent
+P\`{a}i Si\={o}ng-t\`{e} \^{e} ki\'{a}{\nn}-j\^{\i} \hfill 407 \newline
+P\^{e}ng-an m\^{\i}! S\`{e}ng-t\`{a}n m\^{\i}! \hfill 79 \newline
+Ph\'{o}{\dtr}-thian t\^{o}ng-kh\`{e}ng Ch\'{u} l\^{\i}m s\`{e}-k\`{a}i \hfill 94 \newline
+
+\newpage
+\begin{center}T\pehin{a}k S\'{\i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}S\end{center}
+%\par 
+%6 Ch\'{a}-kh\'{\i} \dotfill 2\\
+%6 Ch\'{a}-kh\'{\i} \hfill 3\\
+%Chheng-ch\'{a} sim-s\^{\i}n kap j\siin{\i}t p\^{\i}{\nn} kh\'{\i} \\%\dotfill\\
+%Go\'{a}n \^{e} Thi{\nn} P\={e} Si\={o}ng-t\`{e} \\%\dotfill\\
+%Thi{\nn}-kng j\siin{\i}t-chhut \={m}-thang \`{a}i kh\`{u}n \\%\dotfill\\
+%M\'{u}i ch\'{a}-kh\'{\i} l\'{a}n ti\siin{o}h t\`{\i}-\`{\i} \\%\dotfill\\
+%I\^{a}-h\^{o}-hoa, ch\'{a}-kh\'{\i}-s\^{\i} \\%\dotfill\\
+\noindent
+S\`{e}-chi\={u}{\nn} g\^{u}i-hi\'{a}m chhin-chhi\={u}{\nn} t\={o}a \'{e}ng \hfill 175 \newline
+S\`{e}-j\^{\i}n hun-hun ch\={o}e-ok to-toan \hfill 198 \newline
+S\`{e}-kan b\={a}n-m\pehin{\i}h b\={e} \={u} hit-s\^{\i} \hfill 90 \newline
+S\`{e}-kan ch\`{e}ng-l\^{a}ng ti\pehin{o}h thi\^{a}m-ch\={e}ng \hfill 494 \newline
+S\`{e}-kan \^{e} ch\`{e}ng-l\^{a}ng t\={a}i-ke sim sa{\nn}-t\^{a}ng \hfill 76 \newline
+S\`{e}-kan p\'{\i}-ph\={e}ng n\={n}g t\={u}i t\`{u}i-t\pehin{e}k \hfill 487 \newline
+S\`{e}ng-ch\`{a}i, S\`{e}ng-ch\`{a}i, S\`{e}ng-ch\`{a}i \hfill 51 \newline
+S\`{e}ng-ch\`{a}i, S\`{e}ng-ch\`{a}i, S\`{e}ng-ch\`{a}i, Ch\`{\i}-ko\^{a}n \^{e} Ch\'{u} \hfill 505 \newline
+S\`{e}ng Ch\'{u} beh ch\`{a}i-l\^{\i}m b\^{o} i\^{a}n-t\^{\i} \hfill 146 \newline
+S\`{e}ng Ch\'{u} th\^{a}u-hi\pehin{a}h ta{\nn} si\={u} siong \hfill 110 \newline
+S\`{e}ng-h\={o}e eng-kai \={u} chip-s\={u} \hfill 229 \newline
+S\`{e}ng-h\={o}e s\'{o}{\dtr} ki\^{a}{\nn} \^{e} l\'{e}-g\^{\i} \hfill 214 \newline
+S\`{e}ng-h\={o}e t\pehin{o}k-it \^{e} t\={o}e-ki \hfill 165 \newline
+S\`{e}ng-keng chhin-chhi\={u}{\nn} b\={\i}n-ki\`{a}{\nn} \hfill 183 \newline
+S\`{e}ng Ki\'{a}{\nn} I\^{a}-so{\dtr} ti\`{a}m t\={o}e-chi\={u}{\nn} \hfill 450 \newline
+S\`{e}ng Ki\'{a}{\nn}  I\^{a}-so{\dtr} t\`{u}i thi{\nn} k\`{a}ng-l\^{\i}m \hfill 91 \newline
+S\`{e}ng P\={e}  Si\={o}ng-t\`{e} n\={a} kap l\'{a}n sa{\nn}-t\^{a}ng ki\^{a}{\nn} \hfill 484 \newline
+S\`{e}ng P\={e} Si\={o}ng-t\`{e} ti\`{a}m thi{\nn}-t\'{e}ng \hfill 61 \newline
+S\`{e}ng-t\^{o}{\dtr} ch\={o}e-ch\={o}e Thian-t\^{o}ng khi\={a}-kh\'{\i} \hfill 356 \newline
+S\`{e}ng-t\^{o}{\dtr} ch\={u}-ch\pehin{\i}p Ch\'{u} S\`{e}ng-ti\={a}n \hfill 171 \newline
+S\`{e}ng-t\^{o}{\dtr} kh\`{o}a{\nn}-kh\`{\i}{\nn} thi{\nn}-t\'{e}ng ch\={o}-\={u}i \hfill 153 \newline
+S\`{e}ng-t\^{o}{\dtr} l\'{o}ng ti\pehin{o}h hoa{\nn}-h\'{\i} \hfill 93 \newline
+S\`{e}ng-t\^{o}{\dtr}  ti\pehin{o}h chh\'{\i}{\nn}, hoan-g\^{e}ng S\`{e}ng-t\`{a}n j\pehin{\i}t-ch\'{\i} \hfill 86 \newline
+S\`{\i}-ch\pehin{a}p m\^{\i}-j\pehin{\i}t ti\`{a}m kh\`{o}ng-i\'{a} \hfill 105 \newline
+S\^{\i}-kek g\'{o}a khi\`{a}m-\={e}ng Ch\'{u} \hfill 276 \newline
+Si-un \^{e} Ch\'{u} \'{e}ng-o\'{a}n thi\`{a}{\nn} l\^{a}ng \hfill 367 \newline
+Si\^{a}{\nn}-m\^{n}g ti\pehin{o}h ki\pehin{a}h-kh\'{\i} l\'{\i}n \^{e} th\^{a}u \hfill 8 \newline
+Si\'{a}{\nn}-s\={u} ch\`{e}ng l\^{a}ng oe-khoeh ch\`{o}e k\`{a}u \hfill 489 \newline
+Si\`{a}u-li\={a}m k\`{e}-\'{o}ng chhin-l\^{a}ng p\^{e}ng-i\'{u} \hfill 353 \newline
+Si\`{a}u-li\={a}m s\`{e}ng-t\^{o}{\dtr} l\pehin{e}k-t\={a}i \={u}i Ch\'{u} kan-ch\`{e}ng \hfill 334 \newline
+Sim-b\pehin{a}k \`{n}g Ch\'{u} kian-k\`{o}{\dtr} \hfill 257 \newline
+Sim-koa{\nn} hoa{\nn}-h\'{\i} g\^{\i}m-si chhut-sia{\nn} \hfill 418 \newline
+Sim-l\={a}i b\pehin{o}h \={u}i ph\'{a}i{\nn}-l\^{a}ng put-p\^{e}ng \hfill 12 \newline
+Sim-l\={a}i s\`{o}ng-hiong \^{e} l\^{a}ng \={u} hok \hfill 319 \newline
+Sim-l\^{e}ng j\pehin{\i}t-th\^{a}u, Ch\'{u} g\'{o}a s\'{o}{\dtr} thi\`{a}{\nn} \hfill 370 \newline
+S\'{\i}m-m\pehin{\i}h \={o}e s\'{o}e g\'{o}a sim chheng  \hfill 477 \newline
+S\`{\i}n-t\^{o}{\dtr} ki\'{a}m \={u} kh\`{o}a{\nn}-k\`{\i}{\nn} \hfill 328 \newline
+Si\pehin{o}k t\={\i} I\^{a}-so{\dtr} p\^{e}ng-i\'{u} k\`{e}-\'{o}ng \hfill 350 \newline
+Siong-sim si\`{a}u-li\={a}m g\'{o}a Ch\'{u} l\^{a}u-huih \hfill 109 \newline
+Si\={o}ng-t\`{e} b\={e}ng-l\={e}ng ch\`{e}ng-l\^{a}ng ti\pehin{o}h thia{\nn} \hfill 185 \newline
+Si\={o}ng-t\`{e} ch\`{e}ng l\^{o}{\dtr}-p\pehin{o}k p\`{o} Ch\'{u} h\={o}{\dtr} l\^{a}ng chai \hfill 176 \newline
+Si\={o}ng-t\`{e} ch\`{\i}-ko\^{a}n g\'{o}a \`{a}i chheng-ch\`{a}n \hfill 11 \newline
+Si\={o}ng-t\`{e} chin-chi\`{a}{\nn} s\={\i} g\'{o}a Si\={o}ng-t\`{e} \hfill 21 \newline
+Si\={o}ng-t\`{e} chiong I t\pehin{o}k-si{\nn} S\`{e}ng Ki\'{a}{\nn} \hfill 118 \newline
+Si\={o}ng-t\`{e} chit-s\^{\i} l\^{\i}m-ch\={a}i \hfill 173 \newline
+Si\={o}ng-t\`{e} ch\`{o}e go\'{a}n t\={a}i-t\={a}i pang-ch\={a}n \hfill 27 \newline
+Si\={o}ng-t\`{e} ch\={u}-ji\^{a}n ch\`{\i}-chun b\^{u} t\`{u}i \hfill 59 \newline
+Si\={o}ng-t\`{e} ch\^{u}-pi b\^{u} ki\^{o}ng b\^{u} ch\={\i}n \hfill 18 \newline
+Si\={o}ng-t\`{e} chh\={e}ng t\={o}a  ui-gi\^{a}m ch\`{o}e \^{o}ng \hfill 30 \newline
+Si\={o}ng-t\`{e} chh\`{o}ng-ch\={o} thi{\nn} kap t\={o}e \hfill 62 \newline
+Si\={o}ng-t\`{e} \^{e} I\^{u}{\nn}-ko \hfill 506 \newline
+Si\={o}ng-t\`{e} \^{e} Ki\'{a}{\nn} Ki-tok \hfill 303 \newline
+Si\={o}ng-t\`{e} go\'{a}n o-l\'{o} L\'{\i} (Ch\`{a}n-b\'{\i} si\={o}ng) \hfill 517 \newline
+Si\={o}ng-t\`{e} go\^{a}n-p\'{u}n s\={\i} g\'{o}a B\pehin{o}k-chi\'{a} \hfill 278 \newline
+Si\={o}ng-t\`{e} k\`{a}ng-l\^{\i}m t\={\i} I \^{e} S\`{e}ng-ti\={a}n \hfill 492 \newline
+Si\={o}ng-t\`{e} k\pehin{e}k thi\`{a}{\nn} \={u} ch\={o}e \^{e} l\^{a}ng \hfill 455 \newline
+Si\={o}ng-t\`{e} ki\'{a}{\nn}-j\^{\i} thi\pehin{o}h l\^{a}i g\^{\i}m-si \hfill 124 \newline
+Si\={o}ng-t\`{e} ko\^{a}n-l\^{e}ng s\pehin{\i}t-ch\={a}i \`{o}-bi\={a}u \hfill 253 \newline
+Si\={o}ng-t\`{e} ko\'{a}n-l\'{\i} thi{\nn} t\={o}e kap h\'{a}i \hfill 70 \newline
+Si\={o}ng-t\`{e} k\'{o}ng chhut l\^{a}i ti\`{a}u thi{\nn}-\={e} \hfill 17 \newline
+Si\={o}ng-t\`{e} l\pehin{u}t-hoat t\={e} s\`{\i} k\`{a}i \hfill 210 \newline
+Si\={o}ng-t\`{e} peh-s\`{\i}{\nn} t\={\i} kh\`{o}ng-i\'{a} \hfill 294 \newline
+\hfill 184 \newline
+\hfill 162 \newline
+Si\={o}ng-t\`{e} s\={\i} l\'{a}n an-cho\^{a}n i\`{a}u-s\`{a}i \hfill 320 \newline
+Si\={o}ng-t\`{e} s\={\i} g\'{o}a it-chh\`{e} \`{n}g-b\={a}ng \hfill 341 \newline
+Si\={o}ng-t\`{e} s\={\i} g\'{o}a Thi{\nn} P\={e} \hfill 384 \newline
+Si\={o}ng-t\`{e} s\={\i} go\'{a}n t\^{o}-si\'{a}m s\'{o}{\dtr}-ch\={a}i \hfill 16 \newline
+Si\={o}ng-t\`{e} siat-l\pehin{\i}p an-hioh S\`{e}ng-j\pehin{\i}t \hfill 211 \newline
+Si\={o}ng-t\`{e} siat-l\pehin{\i}p b\={a}n kok \hfill 231 \newline
+Si\={o}ng-t\`{e} s\'{o}{\dtr} s\`{u} O\pehin{a}h-mi\={a} \^{e} \={o}e \hfill 462 \newline
+Si\={o}ng-t\`{e} s\'{o}{\dtr} s\`{u} o\pehin{a}h-mi\={a} \hfill 161 \newline
+Si\={o}ng-t\`{e} thi\`{a}{\nn}-th\`{a}ng i\^{a}{\nn}-k\`{e} it-chh\`{e} \hfill 246 \newline
+Si\={o}ng-t\`{e} thi\`{a}{\nn}-th\`{a}ng th\`{a}i \={o}e hiah t\={o}a \hfill 452 \newline
+Si\={o}ng-t\`{e} \={u} t\`{u}i g\'{o}a Ch\'{u} k\'{o}ng-b\^{e}ng \hfill 38 \newline
+Si\={o}ng-t\`{e} \={u}i-l\'{a}n thi\`{a}{\nn}-th\`{a}ng put-pi\`{a}n \hfill 119 \newline
+S\pehin{\i}p-j\={\i}-k\`{e} t\'{e}ng I\^{a}-so{\dtr} si\={u} t\`{e}ng s\'{\i} \hfill 470 \newline
+Si\={u} b\={o}e hit m\^{\i} Ki\`{u}-ch\'{u} I\^{a}-so{\dtr} \hfill 217 \newline
+Si\={u} Ch\'{u} si\pehin{o}k-h\^{o}e si\={u} Ch\'{u} i-t\={\i} \hfill 220 \newline
+Si\={u}{\nn} g\'{o}a \^{e} Ch\'{u} si\={u} li\pehin{a}h hit m\^{\i} \hfill 458 \newline
+S\`{o}e-h\`{a}n g\'{\i}n-n\'{a} \^{e} p\^{e}ng-i\'{u} \hfill 406 \newline
+S\`{o}e-h\`{a}n g\'{\i}n-n\'{a} kap t\={o}a-l\^{a}ng \hfill 235 \newline
+S\`{o}e-h\`{a}n g\'{\i}n-n\'{a} l\'{\i}n ti\pehin{o}h l\^{a}i thia{\nn} \hfill 389 \newline
+S\`{o}e-h\`{a}n g\'{\i}n-n\'{a} o-l\'{o} Thi{\nn} P\={e} \hfill 405 \newline
+S\`{o}e-s\`{o}e \^{e} si\^{a}{\nn}-chh\={\i} Pek-l\={\i}-h\^{e}ng \hfill 80 \newline
+
+\newpage
+{\rmfamily
+%\begin{center}B\pehin{o}k-Li\pehin{o}k\end{center}
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}T\end{center}
+\noindent
+Ta{\nn} beh s\'{o}a{\nn}-h\={o}e ki\^{u} Ch\'{u} s\`{u}-hok \hfill 514 \newline 
+Ta{\nn} go\'{a}n k\`{a}m-si\={a} Si\={o}ng-t\`{e} \hfill 73 \newline
+Ta{\nn} l\'{a}n t\={a}i-ke l\^{a}i g\^{\i}m-si \hfill 382 \newline
+Ta{\nn} l\'{a}n t\={a}i-ke sa{\nn}-kap siong-pi \hfill 113 \newline 
+Ta{\nn} t\={\i}  chheng-li\^{a}n s\^{\i}-t\={a}i \hfill 438 \newline
+T\={a}i-ke g\^{\i}m Pek-l\={\i}-h\^{e}ng \^{e} si \hfill 96 \newline
+T\={a}i-ke i\'{o}ng-k\'{a}m t\^{a}ng-ch\^{o}e kha-p\={o}{\dtr} \hfill 324 \newline
+T\={a}i-ke ti\pehin{o}h kh\`{o}a{\nn} Si\={o}ng-t\`{e} S\`{e}ng Ko \hfill 111 \newline
+T\={a}i-ke t\={o}a hoa{\nn}-h\'{\i}, o-l\'{o} l\^{a}i g\^{\i}m-si \hfill 101 \newline
+T\^{a}ng-sim o-l\'{o} Thi{\nn}-p\={e} \hfill 54 \newline
+T\`{e} Ch\'{u} \^{e} l\^{a}ng \={u} h\={e}ng-hok \hfill 490 \newline
+T\={\i} ch\pehin{\i}t \^{e} b\'{e}-ch\={o}-nih \hfill 385 \newline
+T\={\i} Ch\'{u} l\={a}i b\^{o} hun tang-sai \hfill 443 \newline
+T\={\i} Ch\'{u} thi\`{a}{\nn}-th\`{a}ng l\={a}i-b\={\i}n \hfill 342 \newline
+T\={\i} g\'{o}a Ki\`{u}-ch\'{u} \^{e}ng-kng b\={\i}n-ch\^{e}ng \hfill 444 \newline
+T\={\i} hit p\^{e}ng \^{e}ng-kng th\'{o}{\dtr}-t\={o}e \hfill 236 \newline
+T\={\i} Pek-t\pehin{e}k-l\={\i} chhut-hi\={a}n \^{e} S\^{\i}n \hfill 290 \newline
+T\={\i} S\`{e}ng-keng \={u} k\`{\i}-ch\`{a}i \'{e}ng-o\'{a}n o\pehin{a}h \^{e} l\={o}{\dtr} \hfill 139 \newline
+T\={\i} s\pehin{\i}p-j\={\i}-k\`{e} Ki\`{u}-ch\'{u} si\={u} s\'{\i} \hfill 114 \newline
+T\={\i} thi{\nn} \^{u}i-o\'{a} Si\={o}ng-t\`{e} ch\={o}-ch\^{e}ng \hfill 358 \newline
+T\={\i} Thian-t\^{o}ng k\pehin{e}k \^{e}ng-kng i\^{a}{\nn} j\pehin{\i}t-t\`{a}u \hfill 351 \newline
+Ti\`{a}m I l\={a}u-p\={e} sin-pi{\nn} ch\`{o}e kang \hfill 391 \newline
+Ti\`{a}n s\`{e}-kan ti\pehin{o}h-b\^{o}a i\`{a}-si\={a}n \hfill 322 \newline
+Ti\pehin{o}h \={e}ng K\^{\i}-tok I\^{a}-so{\dtr} \^{e} sim \hfill 100 \newline
+Ti\pehin{o}h o-l\'{o} I\^{a}-h\^{o}-hoa \hfill 50 \newline
+Ti\pehin{o}h p\^{u}n hi-li\^{a}n h\={o}-t\^{a}ng \hfill 195 \newline
+Ti\pehin{o}h thia{\nn} thi{\nn}-s\`{a}i teh g\^{\i}m k\'{o}ng \hfill 82 \newline
+T\={o}a \'{e}ng hui-si\^{o}ng hiong-b\'{e}ng \hfill 330 \newline
+T\={o}e kap k\^{\i}-tiong s\'{o}{\dtr} chhiong-m\'{o}a \^{e} \hfill 7 \newline
+T\'{u}-ti\pehin{o}h chh\`{\i}-li\={a}n chai-\={e} \^{u}i l\'{\i} \hfill 483 \newline
+T\'{u}i Ch\'{u} thi\`{a}{\nn}-th\`{a}ng b\={a}n h\={a}ng s\={u}-ch\^{e}ng \hfill 337 \newline
+}
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}TH\end{center}
+\noindent
+Th\`{a}u-ch\'{a} kh\`{\i} i\={a} h\'{o} ch\'{e}ng \hfill 488 \newline
+Th\`{a}u k\`{a}u Thian-t\^{o}ng \'{e}ng-o\pehin{a}h s\'{o}{\dtr}-ch\={a}i \hfill 291 \newline
+Thi{\nn}-\={e} b\={a}n-kok ch\`{e}ng-l\^{a}ng ti\pehin{o}h thia{\nn} \hfill 58 \newline
+Thi{\nn}-\={e} b\={a}n-kok tek-ch\={o}e Si\={o}ng-t\`{e} \hfill 192 \newline
+Thi{\nn}-\={e} b\={a}n-pang, b\={a}n-kok, b\={a}n-b\^{\i}n, Ch\pehin{\i}t ch\^{e} l\^{a}i o\'{a} \hfill 34 \newline
+Thi{\nn}-\={e} b\={a}n-pang, b\={a}n-kok, b\={a}n-b\^{\i}n, K\`{e}ng-p\`{a}i Si\={o}ng-t\`{e} \hfill 508 \newline
+Thi{\nn}-\={e} pi\`{a}n-pi\`{a}n t\pehin{a}k pang-kok \hfill 203 \newline
+Thi{\nn}-kng j\pehin{\i}t-chhut \={m}-thang \`{a}i kh\`{u}n \hfill 360 \newline
+Thi{\nn} khui, ch\pehin{\i}t chiah p\pehin{e}h b\'{e} chhut-hi\={a}n \hfill 138 \newline
+Thi{\nn}-l\={o}{\dtr} l\^{a}ng-kheh \={u} hok-kh\`{\i} \hfill 292 \newline
+Thi{\nn}-p\={e}, g\'{o}a chai it-seng kong-im \hfill 336 \newline
+Thi{\nn}-p\={e} go\'{a}n kh\'{u}n-ki\^{u} L\'{\i} \hfill 419 \newline
+Thi{\nn}-p\={e} go\'{a}n t\={a}i-ke ch\^{o}e sia{\nn} \hfill 434 \newline
+Thi{\nn}-p\={e} k\pehin{e}k t\={o}a koh ch\^{u}-pi \hfill 498 \newline
+Thi{\nn}-p\={e} ki\`{u} l\^{a}ng \={u} t\={o}a ko\^{a}n-l\^{e}ng \hfill 449 \newline
+Thi{\nn}-p\={e} khi\={a}-kh\'{\i} ch\`{\i}-ko\^{a}n thi{\nn}-t\'{e}ng \hfill 379 \newline
+Thi{\nn}-p\={e} kh\`{o}a{\nn}-ti\pehin{o}h chhek-chi\'{a}u po\pehin{a}h-l\pehin{o}h \hfill 401 \newline
+Thi{\nn}-p\={e} Si\={o}ng-t\`{e} ch\`{\i}-t\={o}a ch\`{\i}-chun \hfill 264 \newline
+Thi{\nn}-p\={e} Si\={o}ng-t\`{e} ch\`{\i}-t\={o}a j\^{\i}n-\`{a}i \hfill 75 \newline
+Thi{\nn}-p\={e} thi\`{a}{\nn} l\'{a}n s\`{e}-kan ch\`{e}ng-l\^{a}ng \hfill 453 \newline
+Thi{\nn}-p\`{\i}{\nn} o{\dtr}-\`{a}m, chhin-chhi\={u}{\nn} m\^{\i}-s\^{\i} \hfill 112 \newline
+Thi{\nn}-s\`{a}i s\'{o}{\dtr} p\`{o}, chhi\'{a}{\nn} l\'{\i}n t\`{\i}-\`{\i} \hfill 84 \newline
+Thi{\nn}-t\'{e}ng k\'{o}ng-kh\'{\i} Si\={o}ng-t\`{e} \^{e}ng-kng \hfill 5 \newline
+Thi{\nn}-t\'{e}ng s\pehin{\i}t-ch\={a}i \={u} h\'{o} th\'{o}{\dtr}-t\={o}e \hfill 357 \newline
+Thi{\nn}-t\'{e}ng s\`{o}e-li\pehin{a}p kim-chhi{\nn} \hfill 426 \newline
+Thi{\nn}-t\'{e}ng t\={o}a khui un-ti\'{a}n \^{e} m\^{n}g \hfill 466 \newline
+Thi{\nn}-t\={o}e b\={a}n-m\pehin{\i}h b\={e} \={u} \^{e} s\^{\i} \hfill 191 \newline
+Thi{\nn}-t\={o}e Ch\'{u}-ch\'{a}i{\nn} tho\^{a}n-l\pehin{o}h b\={e}ng-l\={e}ng \hfill 339 \newline
+Thi{\nn}-t\={o}e chh\`{o}ng-ch\={o} l\'{o}ng o\^{a}n-p\={\i} \hfill 208 \newline
+Thia{\nn}-k\`{\i}{\nn} Ki\`{u}-ch\'{u} chhut sia{\nn} teh ki\`{o} \hfill 308 \newline
+Thi\`{a}{\nn}-th\`{a}ng chin kng t\={o}a o{\dtr}-\`{a}m pau-\^{u}i tiong \hfill 288 \newline
+Thi\`{a}{\nn}-th\`{a}ng \^{e} S\^{\i}n k\`{a}ng-l\^{\i}m \hfill 160 \newline
+Thian-kok Kun-\^{o}ng ch\`{e}ng ki\'{a}{\nn}-j\^{\i} \hfill 293 \newline
+Thian-t\^{o}ng chi\={u}-s\={\i} l\'{a}n ch\'{o}{\dtr}-ke \hfill 491 \newline
+Thian-t\^{o}ng k\pehin{e}k-h\'{o} s\'{o}{\dtr}-ch\={a}i \hfill 237 \newline
+Thian-t\^{o}ng l\'{o}ng b\^{o} kh\'{o}{\dtr}-l\={a}n \hfill 349 \newline
+Thiu-hi\`{o}ng \^{e} l\^{a}ng Si\={o}ng-t\`{e} b\={\i}n-ch\^{e}ng \hfill 240 \newline
+Thoat-chhut ch\={o}e-ok, o{\dtr}-\`{a}m \^{e} kau-k\`{a}i \hfill 481 \newline
+Th\`{o}e g\'{o}a phah-ph\`{o}a Chi\pehin{o}h-p\^{o}a{\nn}-sin \hfill 189 \newline
+Thong s\`{e}-k\`{a}i kui Ch\'{u} I\^{a}-so{\dtr} \hfill 202 \newline
+Thong s\`{e}-kan t\^{\i}m-l\pehin{e}k t\={\i} o{\dtr}-\`{a}m \^{e} ph\'{a}i{\nn}-t\={a}i \hfill 471 \newline
+}
+
+
+\newpage
+{\rmfamily
+\begin{center}T\pehin{a}k S\'{i}u Th\^{a}u Ch\={o}a \^{e} Sek-\'{\i}n\end{center}
+\begin{center}U\end{center}
+\noindent
+\={U} ch\pehin{\i}t ch\^{a}n s\={u} s\pehin{\i}t-ch\={a}i h\'{o} thia{\nn} \hfill 465 \newline
+\={U} ch\pehin{\i}t \^{e} si\^{a}{\nn} l\={\i} l\'{a}n chin h\={n}g \hfill 117 \newline
+\={U} ch\pehin{\i}t p\'{a}i t\={\i} h\={e}-thi{\nn} \^{e} s\^{\i} \hfill 393 \newline
+\={U} ch\pehin{\i}t p\'{a}i t\={\i} soa{\nn}-i\'{a} \hfill 392 \newline
+\={U}-s\^{\i} l\'{a}n keng-k\`{e} b\'{\i}-l\={e} chheng-ch\={e}ng h\^{o}-k\^{\i}{\nn} \hfill 347 \newline
+\'{U}-ti\={u} b\={a}n-m\pehin{\i}h ch\={o}-chi\^{a}{\nn} \hfill 167 \newline
+\'{U}-ti\={u} t\={o}a Ch\'{u}-ch\'{a}i{\nn} \hfill 396 \newline
+U\={\i} Ch\'{u} l\^{a}i ch\`{o}e I kan-ch\`{e}ng \hfill 482 \newline
+U\={\i} Ch\'{u} phe-mi\={a} kau-chi\`{a}n n\={a} soah \hfill 486 \newline
+Ui-gi\^{a}m Kun-\^{o}ng khi\^{a} l\^{u} ch\`{\i}n-ch\^{e}ng \hfill 107 \newline
+U\={\i}-ti\pehin{o}h b\'{\i}-l\={e} \^{e} t\={o}e-b\={\i}n \hfill 65 \newline
+Un-ji\^{u} B\pehin{o}k-chi\'{a} Ch\'{u} I\^{a}-so{\dtr} \hfill 420 \newline
+Un-kh\^{u}n ch\`{o}e kang, b\^{o} hi\^{a}m l\^{o}-kh\'{o}{\dtr} \hfill 315 \newline
+Un-s\^{u}n M\'{a}-l\={\i} h\={e} E{\nn}-\'{a} \hfill 388 \newline
+}
+
+
+
+
+
+
+\end{document}
