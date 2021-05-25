@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{stackengine}
+\usepackage{musixtex}
+\input musixlyr
+\input musixdbr
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[pages=some]{background}
+\newcommand\BackImage[2][scale=1]{%
+\BgThispage
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,  %% adjust
+%contents={\includegraphics[width=\paperwidth,height=\paperheight]{img01}}
+contents={\includegraphics[#1]{#2}}
+}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand*{\vertchar}[2][0pt]{%
+  \tikz[
+    inner sep=1pt,
+    shorten >=-.15ex,
+    shorten <=-.15ex,
+    line cap=round,
+    baseline=(c.base),
+  ]\draw
+    (0,0) node (c) {#2}
+    ($(c.north)+(#1,0)$) -- ($(c.north)+(#1,0)$);%
+}
+
+
+\makeatletter
+
+\makeatother
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+\newcommand*{\pehinbsiit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{-2pt}\raisebox{2.5pt}{\begin{rotate}{-35}\small\ttfamily\char'15\end{rotate}}}{#1}}
+\newcommand*{\pehinsfit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehinrmit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2.5pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\pehinbf}[1]{\stackinset{c}{}{b}{5.5pt}{\ttfamily\char'15}{#1}}
+\newcommand*{\pehinup}[1]{\stackinset{c}{}{b}{7pt}{\small\ttfamily\char'15}{#1}}
+
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrit}{\hspace{.7pt}\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrbf}{\raisebox{3.5pt}{$\scalebox{.5}{$\bullet$}$}}
+
+
+\begin{document}
+\pagenumbering{gobble} 
+%\pagenumbering{arabic}
+
+%\voffset=-10mm
+%\oddsidemargin=20pt
+\vspace*{-35mm}
+\hspace*{25mm}
+T\pehin{a}k-j\pehin{\i}t G\'{o}a Kho\`{a}i-l\pehin{o}k Kh\`{\i} I\={a}-ch\'{e}ng\\
+
+\begin{music}
+\setstaffs{1}{2}
+%\setclef{1}{60}
+\setclef{1}{\bass\treble}
+\generalsignature{2}
+\generalmeter{\meterfrac44}
+\indivbarrules 
+\sepmultibarrule{1}
+\interstaff{15}
+
+
+\setlyrics{soprano}{T\pehin{a}k-j\pehin{\i}t g\'{o}a kho\`{a}i-l\pehin{o}k kh\`{\i} i\={a} ch\'{e}ng, t\pehin{a}k-j\pehin{\i}t kh\`{o}a{\nn} i puh-g\^{e} seng-ti\'{o}ng, ch\'{e}ng-ch\'{\i} n\={a} i\={a} t\={\i} h\'{o} th\'{o}{\dtr}-t\={o}e, i chi\={u} kiat-s\pehin{\i}t k\`{a}u sa{\nn}-ch\pehin{a}p p\={o}e.}
+
+%\assignlyrics{1}{alto,soprano}
+%\assignlyricsmulti{1}{2}{alto,soprano}
+\assignlyricsmulti{1}{2}{soprano}
+\lyrraise{1}{b-5pt}
+\stafftopmarg20pt
+\nobarnumbers
+\parindent 0pt
+%\hsize=110mm
+\startpiece
+%\startextract
+%\Notes\nextstaff\en\bar
+\addspace{2mm}
+\Notes\zql{6}\ql{4}\nextstaff\cu{-1}\qu{-1}\en
+\Notes\zql{6}\ql{4}\nextstaff\en
+\Notes\nextstaff\cu{-4}\en
+\Notes\zql{4}\ql{8}\nextstaff\cu{1}\cu{1}\en
+\Notes\zql{4}\ql{7}\nextstaff\cu{0}\cu{0}\en\bar
+%2
+\Notes\zw{4}\wh{6}\nextstaff\wh{-1}\en\bar
+%3
+\addspace{2mm}
+\NOtes\zql{6}\ql{4}\nextstaff\cu{1}\qu{1}\en
+\Notes\zql{4}\ibu0{8}{-3}\qb08\tbu0\qb06\nextstaff\sk\cu{-1}\en
+\NOtes\zql{6}\ql{8}\nextstaff\zql{-1}\cu{3}\cu{3}\en
+\Notes\zql{5}\ql{8}\nextstaff\zql{-2}\cu{2}\cu{2}\en\bar
+%4
+\NOtes\zw{4}\wh{8}\nextstaff\zw{-1}\wh{1}\en\bar
+%5
+\NOtes\zql{4}\ql{11}\nextstaff\zq{1}\cu{3}\zq{1}\qu{3}\en
+\Notes\zql{4}\ql{8}\nextstaff\en
+\Notes\nextstaff\zq{-1}\cu{1}\en
+\NOtes\zql{4}\ql{11}\nextstaff\zql{1}\cu{6}\cu{6}\en
+\Notes\zql{6}\ql{11}\nextstaff\zql{3}\cu{5}\cu{5}\en\bar
+%6
+\NOtes\zw{7}\wh{11}\nextstaff\zw{2}\wh{4}\en\bar
+%7
+\Notes\zqu{11}\hl{4}\nextstaff\zqu{1}\cu{3}\zqu{1}\qu{3}\en
+\Notes\ibu0{8}{-3}\qb08\tbu0\qb06\nextstaff\sk\cu{-1}\en
+\Notes\zql{4}\ql{8}\nextstaff\zql{-1}\cu{1}\cu{1}\en
+\Notes\zql{1}\ql{7}\nextstaff\zql{-2}\cu{0}\cu{0}\en\bar
+%8
+\Notes\zw{4}\wh{6}\nextstaff\wh{-1}\en\mulooseness=1
+\Endpiece
+\end{music}
+
+\begin{enumerate}
+\item sa{\nn}-ch\pehin{a}p 
+\item l\pehin{a}k-ch\pehin{a}p
+\item ch\pehin{\i}t-pah
+\end{enumerate}
+
+\end{document}
