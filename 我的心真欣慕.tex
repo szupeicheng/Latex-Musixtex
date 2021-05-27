@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{stackengine}
+\usepackage{musixtex}
+\input musixlyr
+\input musixdbr
+%\usepackage[paperheight=9in,paperwidth=6in]{geometry}
+%\usepackage[paperheight=12in,paperwidth=8in]{geometry}
+%\usepackage[letterpaper]{geometry}%
+%\usepackage[a5paper]{geometry}
+\usepackage[a4paper, bottom=2.5cm]{geometry}
+%\usepackage[letterpaper]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[pages=some]{background}
+\newcommand\BackImage[2][scale=1]{%
+\BgThispage
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,  %% adjust
+%contents={\includegraphics[width=\paperwidth,height=\paperheight]{img01}}
+contents={\includegraphics[#1]{#2}}
+}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand*{\vertchar}[2][0pt]{%
+  \tikz[
+    inner sep=1pt,
+    shorten >=-.15ex,
+    shorten <=-.15ex,
+    line cap=round,
+    baseline=(c.base),
+  ]\draw
+    (0,0) node (c) {#2}
+    ($(c.north)+(#1,0)$) -- ($(c.north)+(#1,0)$);%
+}
+
+
+\makeatletter
+
+\makeatother
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+\newcommand*{\pehinbsiit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{-2pt}\raisebox{2.5pt}{\begin{rotate}{-35}\small\ttfamily\char'15\end{rotate}}}{#1}}
+\newcommand*{\pehinsfit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehinrmit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2.5pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\pehinbf}[1]{\stackinset{c}{}{b}{5.5pt}{\ttfamily\char'15}{#1}}
+\newcommand*{\pehinup}[1]{\stackinset{c}{}{b}{7pt}{\small\ttfamily\char'15}{#1}}
+
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrit}{\hspace{.7pt}\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrbf}{\raisebox{3.5pt}{$\scalebox{.5}{$\bullet$}$}}
+
+
+\begin{document}
+\pagenumbering{gobble} 
+%\pagenumbering{arabic}
+\oddsidemargin=20pt
+\vspace*{-15mm}
+\hspace*{25mm}
+G\'{o}a \^{e} Sim Chin Him-B\={o}{\dtr}\\
+
+\begin{music}
+\setstaffs{1}{2}%
+\setclef{1}{60}%
+\indivbarrules 
+\sepmultibarrule{1}
+%\setsize{1}{1}
+%\hsize=120mm
+%\hsize=180mm
+\setmaxslurs{25}
+\setlyrics{alto}{G\'{o}a \^{e} sim chin him-b\={o}{\dtr}, S\`{e}ng S\^{\i}n chhiong-m\'{o}a g\'{o}a, {\empty} g\'{o}a \^{e} sim chhiat-chhiat kh\'{u}n-ki\^{u} L\'{\i}, {\empty} g\'{o}a \^{e} sim chin him-b\={o}{\dtr} S\`{e}ng {\empty} S\^{\i}n chhiong-m\'{o}a g\'{o}a, g\'{o}a \^{e} sim chhiat-chhiat kh\'{u}n-ki\^{u} L\'{\i}. {\empty}}
+
+\assignlyricsmulti{1}{2}{alto}
+%\lyrraise{1}{b-5pt}
+\lyrraisemulti{1}{2}{b-3pt}
+\interstaff{15}
+\stafftopmarg5pt
+\nobarnumbers
+\parindent 0pt
+\generalsignature{1}
+\generalmeter{\meterfrac34}
+%\setstaffs{1}{2}
+%\setclef{1}{\bass\treble}
+
+\startpiece
+\addspace{10mm}\Notes\zcl{7}\ql{11}\zcl{7}\ql{11}\nextstaff\zqu{2}\cu{4}\zqu{2}\cu{5}\en\bar
+%2
+%\Notes\zhl{H}\hl{a}\sk\sk\zhl{K}\hl{a}\nextstaff\zhl{c}\qu{e}\cu{ee}\zhl{d}\qu{ff}\en\bar
+\Notes\zhl{7}\hl{9}\nextstaff\zhu{2}\hu{6}\en
+\addspace{4mm}\NOtes\zql{7}\ql{11}\nextstaff\zqu{2}\qu{4}\en\bar
+%3
+%\Notes\zhl{.H}\hl{.a}\zqu{G}\qu{L}\nextstaff\zhu{.c}\hu{.e}\zql{b}\cu{e}\cu{e}\en\bar
+\NOtes\stemlength{5}\zcl{7}\ql{10}\zql{.7}\ql{.9}\nextstaff\zqu{0}\cu{3}\zqu{.-1}\qu{.2}\en
+%\addspace{2mm}\Notes\ibl0{7}{3}\zqb0{7}\itieu0{11}\qb0{11}\tbl0\zqb0{7}\ttie0\qb0{11}\nextstaff\ibu1{2}{-3}\zqb1{2}\islurd1{2}\qb1{4}\tbu1\zqb1{=1}\tslur1{3}\qb1{3}\en\bar
+%\addspace{2mm}\notes\ibl0{7}{3}\zqb0{7}\itieu0{11}\qb0{11}\tbl0\zqb0{7}\ttie0\qb0{11}\nextstaff\ibu1{2}{-3}\zqb1{2}\qb1{4}\tbu1\zqb1{=1}\qb1{3}\en\bar
+%exchange main chord note
+\addspace{4mm}\Notes\ibl0{7}{3}\zqb0{7}\isluru0{11}\qb0{11}\tbl0\zqb0{7}\tslur0{11}\qb0{11}\nextstaff\ibu1{4}{-3}\zqb1{4}\islurd1{0}\qb1{2}\tslur1{-1}\tbu1\zqb1{3}\qb1{=1}\en\bar
+%4
+%\NOtes\zhu{F}\hu{M}\sk\sk\zhl{I}\qu{a'F}\nextstaff\zhl{c}\qu{h}\cu{hh}\zhl{^d}\qu{jh}\en\bar
+\Notes\zhl{3}\hl{10}\nextstaff\zhu{0}\hu{2}\en
+\addspace{6mm}\NOtes\zql{3}\ql{10}\nextstaff\zqu{0}\qu{2}\en\bar
+\notes\zqu{0}\cu{7}\zqu{.0}\cu{.7}\nextstaff\zqu{-2}\cu{0}\zqu{.-3}\cu{.-1}\en\addspace{12mm}\notes\zqu{0}\cu{7}\zqu{0}\cu{7}\nextstaff\zqu{-3}\cu{-1}\zqu{-2}\cu{0}\en\bar
+%6
+%\Notes\zwh{'A}\hu{E}\sk\hu{=G}\nextstaff\zhu{c}\qu{'ab}\zhu{`e}\cu{'ccba}\en\bar
+\Notes\stemlength{6}\zhl{9}\hl{0}\nextstaff\zhu{2}\hu{-1}\en\addspace{6mm}\Notes\zcl{4}\ql{7}\nextstaff\zqu{2}\cu{4}\en\addspace{2mm}\Notes\zcl{4}\ql{7}\nextstaff\zqu{2}\cu{4}\en\bar
+%7
+%\Notes\zhl{K}\hl{a}\sk\sk\zhl{K}\hl{a}\nextstaff\zql{d}\qu{f}\zqu{d}\cu{f}\zqu{e}\cu{g}\zqu{f}\qu{'a}\en
+\Notes\zhl{7}\hl{9}\nextstaff\zhu{2}\hu{6}\en
+\addspace{4mm}\NOtes\zql{7}\ql{11}\nextstaff\zqu{2}\qu{4}\en\bar
+%8
+\NOtes\islurd4{3}\zhl{.4}\isluru5{10}\hl{.10}\nextstaff\islurd6{0}\zhu{.1}\isluru7{3}\hu{.3}\en\bar
+%9
+\NOtes\tslur4{3}\zhl{4}\tslur5{10}\hl{10}\nextstaff\tslur6{0}\zhu{1}\tslur7{3}\hu{3}\en\addspace{4mm}\notes\zcl{7}\ql{11}\zcl{7}\ql{10}\nextstaff\zqu{2}\cu{4}\zqu{2}\cu{5}\en\bar
+%2
+\Notes\zhl{7}\hl{9}\nextstaff\zhu{2}\hu{6}\en
+\addspace{4mm}\NOtes\zql{7}\ql{11}\nextstaff\zqu{2}\qu{4}\en\bar
+%3
+\notes\stemlength{5}\zcl{7}\ql{10}\zql{.7}\ql{.9}\nextstaff\zqu{0}\cu{3}\zqu{.-1}\qu{.2}\en
+\addspace{6mm}\notes\ibl2{7}{3}\zqb2{7}\isluru2{11}\qb2{11}\tbl2\zqb2{7}\tslur2{11}\qb2{11}\nextstaff\ibu3{4}{-3}\zqb3{4}\islurd3{0}\qb3{2}\tslur3{-1}\tbu3\zqb3{3}\qb3{=1}\en\bar
+%4-5
+\Notes\zhl{3}\hl{10}\nextstaff\zhu{0}\hu{2}\en
+\addspace{6mm}\NOtes\zql{3}\ql{10}\nextstaff\zqu{0}\qu{2}\en\bar
+\notes\zqu{0}\cu{7}\zqu{.0}\cu{.7}\nextstaff\zqu{-2}\cu{0}\zqu{.-3}\cu{.-1}\en\addspace{10mm}\notes\zqu{0}\cu{7}\zqu{0}\cu{7}\nextstaff\zqu{-3}\cu{-1}\zqu{-2}\cu{0}\en\bar
+%6
+\Notes\stemlength{6}\zhl{9}\hl{0}\nextstaff\zhu{2}\hu{-1}\en\addspace{6mm}\Notes\zcl{4}\ql{11}\nextstaff\zqu{2}\cu{4}\en\addspace{3mm}\Notes\zcl{4}\ql{9}\nextstaff\zqu{-1}\cu{2}\en\bar
+%7
+\Notes\zhl{4}\hl{11}\nextstaff\zhu{2}\hu{4}\en
+\addspace{6mm}\Notes\zql{4}\ql{10}\nextstaff\zqu{1}\qu{3}\en\bar
+%6
+%\Notes\zhl{L}\hl{a}\sk\sk\zhl{L}\qu{b'G}\nextstaff\zhl{c}\qu{e}\cu{hh}\zhl{d}\qu{gi}\en\bar
+\NOtes\islurd8{7}\zhl{.7}\isluru9{9}\hl{.9}\nextstaff\islurd0{-1}\zhu{.-1}\isluru1{2}\hu{.2}\en\bar
+\NOtes\tslur8{7}\zhl{7}\tslur9{9}\hl{9}\nextstaff\tslur0{-1}\zhu{-1}\tslur1{2}\hu{2}\en\mulooseness=1
+\Endpiece
+\end{music}
+
+
+\end{document}
