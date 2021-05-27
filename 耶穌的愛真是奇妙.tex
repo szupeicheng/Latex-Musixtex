@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{stackengine}
+\usepackage{musixtex}
+\input musixlyr
+\input musixdbr
+%\usepackage[paperheight=9in,paperwidth=6in]{geometry}
+%\usepackage[paperheight=12in,paperwidth=8in]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[pages=some]{background}
+\newcommand\BackImage[2][scale=1]{%
+\BgThispage
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,  %% adjust
+%contents={\includegraphics[width=\paperwidth,height=\paperheight]{img01}}
+contents={\includegraphics[#1]{#2}}
+}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand*{\vertchar}[2][0pt]{%
+  \tikz[
+    inner sep=1pt,
+    shorten >=-.15ex,
+    shorten <=-.15ex,
+    line cap=round,
+    baseline=(c.base),
+  ]\draw
+    (0,0) node (c) {#2}
+    ($(c.north)+(#1,0)$) -- ($(c.north)+(#1,0)$);%
+}
+
+
+\makeatletter
+
+\makeatother
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+\newcommand*{\pehinbsiit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{-2pt}\raisebox{2.5pt}{\begin{rotate}{-35}\small\ttfamily\char'15\end{rotate}}}{#1}}
+\newcommand*{\pehinsfit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehinrmit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2.5pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\pehinbf}[1]{\stackinset{c}{}{b}{5.5pt}{\ttfamily\char'15}{#1}}
+\newcommand*{\pehinup}[1]{\stackinset{c}{}{b}{7pt}{\small\ttfamily\char'15}{#1}}
+
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrit}{\hspace{.7pt}\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrbf}{\raisebox{3.5pt}{$\scalebox{.5}{$\bullet$}$}}
+
+
+\begin{document}
+\pagenumbering{gobble} 
+%\pagenumbering{arabic}
+%\oddsidemargin=20pt
+\vspace*{-35mm}
+\hspace*{25mm}
+I\^{a}-So{\dtr} \^{e} Thi\`{a}{\nn} Chin-chi\`{a}{\nn} K\^{\i}-bi\={a}u \newline
+
+\begin{music}
+\setstaffs{1}{2}
+%\setclef{1}{60}
+\setclef{1}{\bass\treble}
+\generalsignature{4}
+\generalmeter{\meterfrac44}
+\indivbarrules 
+\sepmultibarrule{1}
+\interstaff{15}
+
+\setlyrics{alto}{I\^{a}-so{\dtr} \^{e} thi\`{a}{\nn} chin-chi\`{a}{\nn} k\^{\i}- {\empty}bi\={a}u, I\^{a}-so{\dtr} \^{e} thi\`{a}{\nn} chin-chi\`{a}{\nn}  k\^{\i}- {\empty}bi\={a}u, I\^{a}-so{\dtr} \^{e} thi\`{a}{\nn} chin-chi\`{a}{\nn} k\^{\i}-  {\empty}bi\={a}u, k\^{\i}-bi\={a}u \^{e} thi\`{a}{\nn}. {\empty} {\empty}}
+
+\setlyrics{soprano}{Hui-si\^{o}ng ko\^{a}n g\'{o}a b\={o}e-thang po\^{a}{\nn}-k\`{e} i, Hui-si\^{o}ng chhin g\'{o}a b\={o}e-thang chhek-t\pehin{o}k i, Hui-si\^{o}ng khoah g\'{o}a b\={o}e-thang chhek-li\={o}ng i. k\^{\i}-bi\={a}u \^{e} thi\`{a}{\nn}. {\empty} {\empty}}
+
+%\assignlyrics{1}{alto,soprano}
+\assignlyricsmulti{1}{2}{alto,soprano}
+%\assignlyricsmulti{1}{2}{alto}
+%\assignlyricsmulti{1}{2}{soprano}
+\lyrraise{1}{b-5pt}
+\stafftopmarg20pt
+\nobarnumbers
+\parindent 0pt
+%\hsize=110mm
+\startpiece
+%\startextract
+%\Notes\nextstaff\en
+\addspace{2mm}\NOtes\zhu{9}\wh{5}\nextstaff\qu{2}\qu{2}\en
+\NOtes\wh{7}\nextstaff\qu{0}\qu{0}\en\bar
+%2
+\NOtes\zhl{5}\hl{9}\nextstaff\qu{2}\qu{2}\en
+\Notes\zhl{5}\cu{7}\nextstaff\cu{4}\en
+\addspace{1mm}\Notes\cu{8}\nextstaff\cu{3}\en
+\Notes\qu{9}\nextstaff\qu{2}\en\bar
+%3
+\NOtes\zhu{8}\wh{2}\nextstaff\qu{1}\qu{1}\en
+\NOtes\wh{6}\nextstaff\qu{-1}\qu{-1}\en\bar
+%4
+\NOtes\zhu{8}\wh{2}\nextstaff\qu{1}\qu{1}\en
+\Notes\qu{9}\nextstaff\cu{3}\en
+\Notes\nextstaff\cu{2}\en
+\Notes\qu{8}\nextstaff\qu{1}\en\bar
+%5
+\addspace{2mm}\NOtes\zhu{9}\wh{5}\nextstaff\qu{2}\qu{2}\en
+\NOtes\wh{7}\nextstaff\qu{0}\qu{0}\en\bar
+%6
+\NOtes\zhl{5}\hl{9}\nextstaff\qu{2}\qu{2}\en
+\Notes\zhl{5}\cu{7}\nextstaff\cu{4}\en
+\addspace{1mm}\Notes\cu{8}\nextstaff\cu{3}\en
+\Notes\qu{9}\nextstaff\qu{2}\en\bar
+%7
+\NOtes\zhu{9}\wh{2}\nextstaff\zhu{4}\wh{-1}\en
+\Notes\qu{9}\nextstaff\qu{3}\en
+\Notes\qu{8}\nextstaff\qu{1}\en\bar
+%8
+\NOtes\zqu{7}\wh{5}\nextstaff\wh{0}\en
+\Notes\qu{8}\nextstaff\ql{=-2}\en
+\Notes\hu{7}\nextstaff\hl{-3}\en\mulooseness=1
+\Endpiece
+\end{music}
+
+
+\end{document}
