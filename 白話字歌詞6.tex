@@ -1,0 +1,677 @@
+\documentclass{article}
+\usepackage{stackengine}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+%\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+\usepackage[a5paper, ]{geometry}
+%\usepackage[a5paper, inner=1.4cm,outer=1.4cm, twoside, bottom=1.5cm]{geometry}
+\usepackage{pdflscape}
+\usepackage[dvipsnames, svgnames]{xcolor}
+\usepackage[pages=some]{background}
+\usepackage{tikz}
+\usetikzlibrary{math} 
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary[decorations.text]
+\setlength{\footskip}{80pt}
+
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrh}{\raisebox{5pt}{$\scalebox{.3}{$\bullet$}$}}
+
+
+
+\begin{document}
+\pagenumbering{gobble} 
+
+{\rmfamily 
+\begin{center}B\pehin{o}k-Li\pehin{o}k\end{center}
+Ch\'{u} \={u} un-ti\'{a}n t\={o}a ch\^{u}-pi \dotfill 1 \newline
+Chheng-ch\'{a} sim-s\^{\i}n kap j\pehin{\i}t p\^{\i}{\nn} kh\'{\i} \dotfill 2 \newline
+Chheng-li\^{a}n \^{e} h\'{o} B\pehin{o}k-chi\'{a} \dotfill 3 \newline
+Chheng-sim \^{e} \={u} hok-kh\`{\i} \dotfill 4 \newline
+Chhi\'{a}{\nn} kh\`{o}a{\nn} Ki\`{u}-ch\'{u}, \^{e}ng-i\={a}u Kun-\^{o}ng \dotfill 5 \newline
+Chhi\'{a}{\nn} kh\`{o}a{\nn} si\={a}n-li\^{o}ng ch\^{u}-pi B\pehin{o}k-chi\'{a} \dotfill 7 \newline
+Chhi\'{a}{\nn} l\^{a}i, chhi\'{a}{\nn} l\^{a}i, \'{I}-m\'{a}-l\={o}e-l\={\i} \dotfill 8 \newline
+Chhi\'{a}{\nn} l\^{a}i ! L\'{a}n ti\pehin{o}h \`{n}g I\^{a}-h\^{o}-hoa \dotfill 9 \newline
+Chhi\'{a}{\nn} l\^{a}i tiong-s\`{\i}n s\`{e}ng-t\^{o}{\dtr} \dotfill 10 \newline
+Chhi\'{a}{\nn} l\'{a}n t\={a}i-ke t\={o}a sia{\nn} chhi\`{u}{\nn}-koa \dotfill 11 \newline
+Chhi\'{a}{\nn} thia{\nn} thi{\nn}-s\`{a}i hoa{\nn}-h\'{\i} \^{e} sia{\nn} \dotfill 12 \newline
+Chh\`{u} n\={a} \={m}-s\={\i} Ch\'{u} k\={a} l\'{a}n kh\'{\i} \dotfill 13 \newline
+Chhun-thi{\nn} chi\'{a}u-chiah l\'{o}ng hoa{\nn}-h\'{\i} \dotfill 14 \newline
+Chhut-j\pehin{\i}t l\pehin{o}h h\={o}{\dtr} s\={\i} Ch\'{u} s\'{o}{\dtr} t\={e}ng \dotfill 15 \newline 
+E\^{n}g-kng kui Ch\`{\i}-ko\^{a}n \^{e} Ch\'{u} \dotfill 16 \newline
+E\^{n}g-kng kui S\`{e}ng P\={e} Si\={o}ng-t\`{e} E\^{n}g-kng S\`{e}ng Ki\'{a}{\nn} \dotfill 17 \newline
+E\^{n}g-kng kui S\`{e}ng P\={e} Si\={o}ng-t\`{e} \dotfill 18 \newline
+E\^{n}g-kng kui t\={\i} S\`{e}ng P\={e} Si\={o}ng-t\`{e} \dotfill 19 \newline
+}
+
+\newpage \pagenumbering{arabic} 
+\noindent  \rmfamily {
+L\'{\i} \={e}ng L\'{\i} \^{e} un-ti\'{a}n ch\`{o}e n\^{\i}-tang \^{e} bi\'{a}n-li\^{u}, L\'{\i} \^{e} l\={o}{\dtr}-k\`{e}ng l\'{o}ng \={u} i\^{u} teh tih (Si-phian 65:11). }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} {\rmfamily {
+Ch\'{u} \={u} un-ti\'{a}n t\={o}a ch\^{u}-pi, \newline
+H\={o}{\dtr} go\'{a}n an-ji\^{a}n k\`{e} ch\pehin{\i}t n\^{\i} ; \newline
+Go\'{a}n ta{\nn} k\'{a}m-si\={a}  \={e}ng s\^{e}ng-sim, \newline
+Ki\^{u} Ch\'{u} I\^{a}-so{\dtr} thia{\nn} go\'{a}n g\^{\i}m.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+L\'{\i} \={u} l\^{a}i th\`{o}e go\'{a}n si\={u} s\'{\i}, \newline
+H\={o}{\dtr} go\'{a}n ch\={o}e-k\`{o}a l\'{o}ng thoat-l\={\i} ; \newline
+K\`{e}-kh\`{\i} t\={a}i-ch\`{\i} p\`{a}ng ch\pehin{\i}t p\^{e}ng, \newline
+\`{N}g-b\={a}ng \^{e}ng-kng t\pehin{\i}t ch\`{\i}n-ch\^{e}ng.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+B\={e} l\^{a}i t\={a}i-ch\`{\i} chin o{\dtr}-\`{a}m, \newline
+Kh\'{e}-b\^{e}ng-chhi{\nn} chh\={o}a go\'{a}n l\={o}{\dtr}-ch\={a}m ; \newline
+T\'{u}-ti\pehin{o}h M\^{o}{\dtr}-k\'{u}i hiong-ok l\^{a}i, \newline
+Ch\'{u} L\'{\i} ch\={a}n go\'{a}n kap i th\^{a}i.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+\={U}-s\^{\i} lo\'{a}n-ji\pehin{o}k koh siong-pi, \newline
+Ki\^{u} Ch\'{u} kian-k\`{o}{\dtr} go\'{a}n sim-ch\`{\i} ; \newline
+Ki\^{a}{\nn} k\`{a}u kh\`{o}ng-i\'{a} t\={o}a soa-po{\dtr}, \newline
+J\={\i}n Ch\'{u} \'{e}ng-o\pehin{a}h chin \^{e} l\={o}{\dtr}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 5. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+H\={o}{\dtr} go\'{a}n s\`{e}ng-kiat kap s\`{\i}n-s\pehin{\i}t, \newline
+Koh \={o}e kap Ch\'{u} n\'{a} chhin-b\pehin{\i}t ; \newline
+Ch\={a}n go\'{a}n ch\={\i}n-l\pehin{a}t g\^{a}u j\'{\i}m-si\={u}, \newline
+Kham t\`{\i} \`{e}ng-\'{u}n \^{e} bi\'{a}n-li\^{u}.
+
+}}
+
+\newpage
+\noindent \hspace*{10mm} \rmfamily {
+G\'{o}a \^{e} s\^{\i}n ah, l\'{\i} ti\pehin{o}h cheng-s\^{\i}n kh\'{\i}-l\^{a}i (Si-phian 57: 8). }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Chheng-ch\'{a} sim-s\^{\i}n kap j\pehin{\i}t p\^{\i}{\nn} kh\'{\i}, \newline
+Che l\^{a}ng h\pehin{a}p-s\^{\i} h\'{\i}-l\pehin{o}k b\^{o} p\'{\i}, \newline
+K\`{\i}{\nn}-ti\pehin{o}h Si\={o}ng-t\`{e} \^{e}ng-kng \^{e} b\={\i}n, \newline
+B\={a}n-m\pehin{\i}h t\`{u}i I s\^{\i}-si\^{o}ng o\={a}{\nn} sin !
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox [t][10mm][l] {75mm} { \rmfamily {
+Si\={o}ng-t\`{e} thi\`{a}{\nn}-th\`{a}ng t\pehin{a}k j\pehin{\i}t t\^{e}ng-sin, \newline
+T\`{u}i l\'{a}n kh\`{u}n-chh\'{\i}{\nn} pi\'{a}u-b\^{e}ng s\={\i} chin, \newline
+Chh\={o}a l\'{a}n p\^{e}ng-an keng-k\`{e} \`{a}m-m\^{\i}, \newline
+Khoe-h\pehin{o}k o\pehin{a}h-mi\={a}, kh\`{u}i-l\pehin{a}t, sim-ch\`{\i}.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Siat-s\'{u} sim-s\^{\i}n t\pehin{a}k-j\pehin{\i}t t\`{\i}-\`{\i}, \newline
+S\`{e}ng-h\`{o}a it-chh\`{e} kang-chok \^{e} s\^{\i}, \newline
+Si\={o}ng-t\`{e} p\={\i}-p\={a}n b\^{o} h\={a}n ch\^{a}i-p\'{o}, \newline
+P\'{o}{\dtr} l\'{a}n it-chh\`{e} hi-seng, l\^{o}-kh\'{o}{\dtr}.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Chiu-\^{u}i ph\'{o}{\dtr}-thong si\'{o}-kh\'{o}a khang-kh\`{e}, \newline
+I\={a} \={o}e h\={o}{\dtr} l\'{a}n tit-ti\pehin{o}h ki-h\={o}e, \newline
+Ch\={\i}n-li\={o}ng khek-k\'{\i}, kh\`{o}a{\nn} b\^{o} ka-k\={\i}, \newline
+J\pehin{\i}t-j\pehin{\i}t k\={u}n-o\'{a} Si\={o}ng-t\`{e} sin-pi{\nn}.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 5. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Ch\'{\i}-\={u} t\={\i} Ch\'{u} L\'{\i} thi\`{a}{\nn} l\={a}i-b\={\i}n, \newline
+O\={e} s\`{u} si\pehin{o}k thi{\nn} p\^{e}ng-an b\^{o} ch\={\i}n, \newline
+Kim-j\pehin{\i}t \'{\i}-a\={u} ki\^{u} L\'{\i} ch\={a}n go\'{a}n, \newline
+Chi\`{a}u go\'{a}n s\'{o}{\dtr} ki\^{u} ki\^{a}{\nn} k\`{a}u o\^{a}n-cho\^{a}n.
+}}
+
+
+\newpage
+\noindent  \rmfamily {
+In-\={u}i g\'{o}a I\^{a}-h\^{o}-hoa, l\'{\i} \^{e} Si\={o}ng-t\`{e}, beh khan l\'{\i} \^{e} chi\`{a}{\nn}-chhi\'{u}, k\={a} l\'{\i} k\'{o}ng, \={m}-bi\'{a}n kia{\nn} (I-s\`{a}i-a 41: 1). }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox [t][20mm][l] {75mm} { \rmfamily {
+Chheng-li\^{a}n \^{e} h\'{o} B\pehin{o}k-chi\'{a}, \newline
+E\={n}g thi\`{a}{\nn} chh\={o}a go\'{a}n keng-k\`{e} \newline
+Kham-khi\pehin{a}t l\={o}{\dtr}-t\^{o}{\dtr}, \newline
+Ki-tok, tek-s\`{e}ng Kun-\^{o}ng, \newline
+S\`{e}ng mi\^{a} go\'{a}n beh chun-ch\^{o}ng, \newline
+Chhi\'{a}{\nn} thia{\nn} go\'{a}n ch\`{e}ng chheng-li\^{a}n \newline
+O-l\'{o} chheng-ho{\dtr}. 
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox [t][20mm][l] {55mm} { \rmfamily {
+L\'{\i} s\={\i} s\`{e}ng-kiat \^{e} Ch\'{u}, \newline
+It-chh\`{e} ko\^{a}n-p\`{e}ng l\'{o}ng \={u}, \newline
+T\={\i} s\`{e} p\^{e}ng-ti\={a}{\nn}, \newline
+Khiam-pi ka-k\={\i} khut-k\={e}, \newline
+U\={\i}-ti\pehin{o}h ki\`{u} l\^{a}ng k\`{a}ng-s\`{e}, \newline
+H\={o}{\dtr} in kui-si\pehin{o}k Thi{\nn} P\={e}, \newline
+Hi\'{o}ng-si\={u} o\pehin{a}h-mi\={a}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox [t][20mm][l] {55mm} { \rmfamily {
+E\'{n}g-o\'{a}n ch\`{o}e go\'{a}n L\'{e}ng-t\={o}, \newline
+H\^{u}-chh\^{\i}, pang-ch\={a}n, chi\`{a}u-k\`{o}{\dtr}, \newline
+S\^{\i}-si\^{o}ng p\'{o}-h\={o}{\dtr}, \newline
+Si\={o}ng-t\`{e} S\`{e}ng Ki\'{a}{\nn} I\^{a}-so{\dtr}, \newline
+E\={n}g L\'{\i} o\pehin{a}h-mi\={a} \^{e} T\={o}, \newline
+Chh\={o}a go\'{a}n l\^{a}i ki\^{a}{\nn} o\pehin{a}h-l\={o}{\dtr}, \newline
+S\`{\i}n-gi\'{o}ng kian-k\`{o}{\dtr}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox [t][20mm][l] {55mm} { \rmfamily {
+T\`{u}i ta{\nn} t\pehin{\i}t-k\`{a}u go\'{a}n s\'{\i}, \newline
+Hoa{\nn}-h\'{\i} o-l\'{o} g\^{\i}m-si, \newline
+M\^{\i}-j\pehin{\i}t k\`{e}ng-h\={o}ng, \newline
+Go\={a}n ch\`{e}ng s\`{e}ng-t\^{o}{\dtr} l\'{o}ng l\^{a}i, \newline
+T\^{a}ng-sim ch\={u}-ch\pehin{\i}p k\`{e}ng-p\`{a}i, \newline
+T\={a}i-ke chhut-sia{\nn} g\^{\i}m k\'{o}ng, \newline
+Ki-tok ch\`{o}e O\^{n}g. \newline
+
+}}
+
+\newpage
+\noindent  \rmfamily {
+Chheng-kh\`{\i} sim-koa{\nn} \^{e} l\^{a}ng \={u} hok-kh\`{\i}, in-\={u}i in beh kh\`{o}a{\nn}-k\`{\i}{\nn} Si\={o}ng-t\`{e} (M\'{a}-th\`{a}i 5: 8). } 
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+\hspace*{2mm} Chheng-sim \^{e} \={u} hok-kh\`{\i}, \newline
+\hspace*{2mm} In beh kh\`{o}a{\nn}-k\`{\i}{\nn} Si\={o}ng-t\`{e}, \newline
+Koh \={o}e b\^{e}ng-p\pehin{e}k Ch\'{u} s\`{e}ng ch\'{\i}-\`{\i}, \newline
+\hspace*{2mm} Ch\'{u} beh kap in khi\={a}-kh\'{\i}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+\hspace*{2mm} Ki\`{u}-ch\'{u} l\={\i}-khui thian-t\^{e}ng, \newline
+\hspace*{2mm} Si\'{u}{\nn}-s\`{u} o\pehin{a}h-mi\={a} h\^{o}-p\^{e}ng, \newline
+Kam-go\={a}n khut k\={e} ti\`{a}m l\^{a}ng tiong-kan, \newline
+\hspace*{2mm} L\^{a}u h\'{o} b\^{o}{\dtr}-i\={u}{\nn} h\={o}{\dtr} l\'{a}n.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+\hspace*{2mm} K\`{\i}{\nn}-n\={a} sim-s\^{\i}n khiam-pi, \newline
+\hspace*{2mm} Ch\'{u} beh ch\`{\i}n-j\pehin{\i}p khi\={a}-kh\'{\i}, \newline
+Ch\'{u} k\'{e}ng s\^{u}n-cho\^{a}n chheng-kh\`{\i} sim-koa{\nn}, \newline
+\hspace*{2mm} Ch\`{o}e I p\'{o}-ch\={o} \'{e}ng t\`{o}a.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+\hspace*{2mm} Ch\'{u}, go\'{a}n l\^{a}i ti\^{a}u-k\`{\i}{\nn} L\'{\i}, \newline
+\hspace*{2mm} Go\={a}n L\'{\i} s\`{u} che hok-kh\`{\i}, \newline
+H\={o}{\dtr} go\'{a}n \={o}e tit chheng-sim khiam-pi, \newline
+\hspace*{2mm} Ch\`{o}e ti\={a}n h\={o}{\dtr} L\'{\i} khi\={a}-kh\'{\i}. 
+}}
+
+\newpage
+\noindent \rmfamily {
+I seng-ko\^{a}n \^{e} s\^{\i} chi\={u} li\pehin{a}h hiah \^{e} si\={u} li\pehin{a}h \^{e}, i\={a} chiong chiah \^{e} un-s\`{u} pun h\={o}{\dtr} l\^{a}ng (\'{I}-hut-s\'{o}{\dtr} 4: 8) }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Chhi\'{a}{\nn} kh\`{o}a{\nn} Ki\`{u}-ch\'{u}, \^{e}ng-i\={a}u Kun-\^{o}ng, \newline
+Kong-ph\`{o}a t\`{u}i-t\pehin{e}k t\={o}a tek-s\`{e}ng, \newline
+E\={n}g h\^{u}n ch\`{o}e chhia, kong-chh\'{a}i hui-h\^{o}ng, \newline
+It-t\pehin{\i}t chi\={u}{\nn} ko\^{a}n k\`{a}u thian-t\^{e}ng, \newline
+Chhi\'{a}{\nn} thia{\nn} thi{\nn}-s\`{a}i ch\^{o}e-sia{\nn} g\^{\i}m-si, \newline
+Ha-le-lu-iah, in k\`{e}ng-h\={o}ng, \newline
+Thi{\nn}-m\^{n}g t\={o}a khui ko\^{a}n-ko\^{a}n k\'{u}-kh\'{\i}, \newline
+Hoan-g\^{e}ng tek-s\`{e}ng t\={o}a Kun-\^{o}ng.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Ch\={\i}-ch\={u}i l\^{\i}m-k\`{a}u hiah t\={o}a \^{e}ng-kng ? \newline
+H\={o}-th\^{a}u sia{\nn}-im hi\'{a}ng b\^{o} p\'{\i}, \newline
+B\={a}n-kun \^{e} Ch\'{u} ko\^{a}n-p\`{e}ng chi\^{a}u-ch\^{n}g, \newline
+I \={u} tit-ti\pehin{o}h t\={o}a s\`{e}ng-l\={\i}, \newline
+Ch\'{u} t\={\i} s\pehin{\i}p-k\`{e} si\={u} t\={o}a kh\'{o}{\dtr}-l\={a}n, \newline
+T\`{u}i b\={o}ng koh kh\'{\i} t\={o}a hi\'{a}n-hek, \newline
+Siau-t\^{u} ch\={o}e-ok, ch\^{a}u-bi\pehin{a}t Sat-t\`{a}n, \newline
+E\={n}g s\'{\i} th\^{a}i i\^{a}{\nn} ch\`{e}ng t\`{u}i-t\pehin{e}k.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Ch\'{u} \={u} th\^{e}-ko l\'{a}n \^{e} j\^{\i}n-s\`{e}ng, \newline
+Ch\={e} h\^{u}n k\`{a}u t\={\i} P\={e} sin-pi{\nn}, \newline
+H\={o}{\dtr} l\'{a}n t\={a}i-ke thang ti\`{a}m thi{\nn}-t\'{e}ng, \newline
+T\={\i} Ch\'{u} \^{e}ng-kng t\^{a}ng khi\={a}-kh\'{\i}, \newline
+I\^{a}-so{\dtr} chi\'{a}ng-ko\^{a}n, thi{\nn}-s\`{a}i k\`{e}ng-p\`{a}i, \newline
+I kap Si\={o}ng-t\`{e} \'{e}ng ch\`{o}e O\^{n}g, \newline
+Cho\^{a}n-l\^{e}ng S\`{e}ng Ch\'{u} chi\={u}{\nn} k\`{a}u thian-k\`{a}i, \newline
+Go\'{a}n i\={a} t\`{u}i s\`{\i}n j\pehin{\i}p Thain-t\^{o}ng.
+
+}}
+\newpage
+\noindent
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Kh\`{o}a{\nn} Ch\'{u} I\^{a}-so{\dtr} t\={a}i-seng l\'{a}n kh\`{\i}, \newline
+P\={\i}-p\={a}n thi{\nn}-nih \^{e} chh\`{u}-th\pehin{e}h, \newline
+Kh\`{o}a{\nn} I si\^{o}ng-si\^{o}ng thi\`{a}{\nn} l\'{a}n b\^{o} l\={\i}, \newline
+Pek-chhiat k\^{\i}-ki\^{u} l\'{a}n Thi{\nn} P\={e}, \newline
+Chhi\'{a}{\nn} kh\`{o}a{\nn} Thi{\nn}-s\`{a}i kui t\={\i}n sa{\nn} p\^{a}i, \newline
+P\^{u}n h\={o}-th\^{a}u sia{\nn}-im chin-t\={o}a, \newline
+I beh ch\={e} h\^{u}n \^{e}ng-kng ch\`{a}i l\^{a}i, \newline
+Ti\`{a}u s\`{e}-j\^{\i}n l\^{a}i si\={u} s\'{\i}m-ph\`{o}a{\nn}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 5. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+E\^{n}g-kng kui t\={\i} S\`{e}ng P\={e} Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng kui S\`{e}ng Ki\'{a}{\nn} Si\={o}ng-t\`{e}, \newline
+I \={u}i l\'{a}n s\'{\i} koh-o\pehin{a}h chi\={u}{\nn} thi{\nn}, \newline
+Thian-t\^{o}ng p\'{o}-ch\={o} I \'{e}ng ch\={e}, \newline
+E\^{n}g-kng kui t\={\i} S\`{e}ng S\^{\i}n Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng kui Sam-\={u}i-it-th\'{e}, \newline
+E\^{n}g-kng chhiong-m\'{o}a thi{\nn}-t\'{e}ng t\={o}e-\={e}, \newline
+E\^{n}g-kng \'{e}ng-o\'{a}n k\`{a}u b\={a}n-s\`{e}.
+
+}}
+
+\newpage
+\noindent \rmfamily {
+I beh chhin-chhi\={u}{\nn} b\pehin{o}k-chi\'{a} k\`{o}{\dtr} I \^{e} i\^{u}{\nn}-k\^{u}n, I beh \={e}ng chhi\'{u} \^{a}{\nn}-o\'{a} i\^{u}{\nn}-\'{a}-ki\'{a}{\nn}, ph\={o} i t\={\i} heng-ch\^{e}ng, b\={a}n-b\={a}n chh\={o}a hiah \^{e} i\^{u}{\nn}-\'{a} suh lin-{-}\^{e} (\'{I}-s\`{a}i-a 40:11 ).
+}
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Chhi\'{a}{\nn} kh\`{o}a{\nn} si\={a}n-li\^{o}ng ch\^{u}-pi B\pehin{o}k-chi\'{a}, \newline
+\hspace*{2mm} B\={\i}n-m\={a}u h\^{o}-t\'{e}ng kng-b\^{e}ng, \newline
+I chhut sia{\nn} ki\`{o} lo\'{a}n-ji\pehin{o}k i\^{u}{\nn}-ki\'{a}{\nn}, \newline
+\hspace*{2mm} Ph\={o} in t\={\i} I heng-ch\^{e}ng.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Ch\'{u} k\'{o}ng, "I\^{o}ng-\'{u}n s\`{o}e-ki\'{a}{\nn} chi\={u} G\'{o}a, \newline
+\hspace*{2mm} B\pehin{o}h-tit kh\`{o}a{\nn}-khin bi\'{a}u-s\={\i}", \newline
+T\`{u}i thi{\nn} k\`{a}ng-l\^{\i}m l\^{a}i kap in t\`{o}a, \newline
+\hspace*{2mm} Ti\^{a}u-t\^{\i} beh ki\`{u} si\'{a}u-j\^{\i}.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox [t][10mm][l] {65mm} { \rmfamily {
+Ki\`{u}-ch\'{u} g\'{o}a chiong ki\'{a}{\nn}-j\^{\i} chh\={o}a l\^{a}i, \newline
+\hspace*{2mm} Kam-sim h\={o}ng-hi\`{a}n h\={o}{\dtr} L\'{\i}, \newline
+E\'{n}g-o\'{a}n si\pehin{o}k L\'{\i} si\={u} L\'{\i} k\`{o}{\dtr}-\`{a}i, \newline
+\hspace*{2mm} Go\={a}n Ch\'{u} s\`{u} in hok-kh\`{\i}.
+}}
+
+\newpage
+\noindent \hspace*{-3mm}  \parbox[t][3mm][l]{110mm} {\rmfamily {
+In-\={u}i \'{a}n-ni Ch\'{u} p\'{u}n-sin beh h\={o}{\dtr} l\'{\i}n ch\pehin{\i}t \^{e} ti\={a}u-th\^{a}u; kh\`{o}a{\nn} ah! \={u} ch\={a}i-sek-l\'{u} beh  ho\^{a}i-\={\i}n si{\nn}-ki\'{a}{\nn}, k\={a} i h\={o} mi\^{a} ki\`{o} \'{I}-m\'{a}-l\={o}e-l\={\i} (\'{I}-s\`{a}i-a 7:14 ).
+ }} 
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][20mm][l] {65mm} {\rmfamily {
+Chhi\'{a}{\nn} l\^{a}i, chhi\'{a}{\nn} l\^{a}i, \'{I}-m\'{a}-l\={o}e-l\={\i}, \newline
+Ki\`{u}-si\pehin{o}k \'{I}-sek-li\pehin{a}t ch\`{e}ng ki\'{a}{\nn}-j\^{\i}, \newline
+In si\={u} chhian-s\'{o}a sit-ch\`{\i} siong-sim, \newline
+Ki\pehin{a}h th\^{a}u \`{n}g-b\={a}ng S\`{e}ng Ki\'{a}{\nn} k\`{a}ng-l\^{\i}m, \newline
+Hoa{\nn}-h\'{\i}, hoa{\nn}-h\'{\i}, \'{I}-m\'{a}-l\={o}e-l\={\i}, \newline
+\'{I}-sek-li\pehin{a}t ah, Ch\'{u} beh l\^{a}i-l\^{\i}m.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][20mm][l] {65mm} { \rmfamily {
+Chhi\'{a}{\nn} l\^{a}i, chhi\'{a}{\nn} l\^{a}i, I\^{a}-se kun-ki, \newline
+Th\'{a}u-p\`{a}ng Sat-t\`{a}n chhi\'{u} l\={a}i peh-s\`{\i}{\nn}, \newline
+Ch\'{\i}n-ki\`{u} l\={\i}-khui t\={e}-g\pehin{e}k bi\'{a}n s\'{\i}, \newline
+Thoat-chhut s\'{\i}-b\^{o} h\^{u}n-b\={o}ng s\`{e}ng-l\={\i}, \newline
+Hoa{\nn}-h\'{\i}, hoa{\nn}-h\'{\i}, \'{I}-m\'{a}-l\={o}e-l\={\i}, \newline
+\'{I}-sek-li\pehin{a}t ah, Ch\'{u} beh l\^{a}i-l\^{\i}m.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][20mm][l] {65mm} { \rmfamily {
+Chhi\'{a}{\nn} l\^{a}i, chhi\'{a}{\nn}  l\^{a}i, T\={a}i-p\pehin{\i}t s\'{o}-s\^{\i}, \newline
+Un-ti\'{a}n \^{e} m\^{n}g \={u}i l\'{a}n t\={o}a khui, \newline
+Th\`{a}u thi{\nn} \^{e} l\={o}{\dtr} \={u}i l\'{a}n khai-thok, \newline
+To\={a}n-cho\pehin{a}t s\'{\i}-sit \'{e}ng-o\'{a}n kho\`{a}i-l\pehin{o}k, \newline
+Hoa{\nn}-h\'{\i}, hoa{\nn}-h\'{\i}, \'{I}-m\'{a}-l\={o}e-l\={\i}, \newline
+\'{I}-sek-li\pehin{a}t ah, Ch\'{u} beh l\^{a}i-l\^{\i}m.
+
+}}
+
+\newpage
+\noindent \rmfamily {
+Khui-h\={o}e si
+ } 
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} {\rmfamily {
+Chhi\'{a}{\nn} l\^{a}i ! L\'{a}n ti\pehin{o}h \`{n}g I\^{a}-h\^{o}-hoa, \newline
+ Ch\^{o}e-sia{\nn} t\`{u}i I chhi\`{u}{\nn}-koa, \newline
+T\^{a}ng-sim o-l\'{o} ch\'{\i}n-ki\`{u} chi\pehin{o}h-p\^{o}a{\nn}, \newline
+T\={o}a sia{\nn} hoa{\nn}-h\'{\i} chhi\`{u}{\nn}-koa.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+L\'{a}n ti\pehin{o}h l\^{a}i k\`{a}u Si\={o}ng-t\`{e} b\={\i}n-ch\^{e}ng, \newline
+O-l\'{o} k\'{a}m-si\={a} kiong-k\`{e}ng, \newline
+E\={n}g si \={e}ng koa ch\pehin{\i}t-ch\^{o}e \`{n}g I, \newline
+T\={o}a sia{\nn} hoa{\nn}-h\'{\i} g\^{\i}m-si.
+
+}}
+
+\newpage
+\noindent \rmfamily {
+Chiah \^{e} thi{\nn}-s\`{a}i l\={\i}-khui in chi\={u}{\nn}-thi{\nn} \^{e} s\^{\i}, k\`{o}{\dtr}-i\^{u}{\nn} \^{e} sa{\nn}-kap k\'{o}ng , Ta{\nn} l\'{a}n l\^{a}i kh\`{\i} Pek-l\={\i}-h\^{e}ng kh\`{o}a{\nn} s\'{o}{\dtr} chi\^{a}{\nn} \^{e} s\={u} (L\={o}{\dtr}-ka 2: 15).
+} 
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][10mm][l] {85mm} {\rmfamily {
+Chhi\'{a}{\nn} l\^{a}i tiong-s\`{\i}n s\`{e}ng-t\^{o}{\dtr}, \newline
+Kho\`{a}i-l\pehin{o}k, tek-\`{\i}, hi\`{o}ng-ch\^{e}ng, \newline
+Chhi\'{a}{\nn} l\^{a}i, chhi\'{a}{\nn} l\^{a}i, hoa{\nn}-h\'{\i} k\`{a}u Pek-l\={\i}-h\^{e}ng, \newline
+L\^{a}i, l\^{a}i ti\^{a}u-k\`{\i}{\nn} Ch\'{u}, \newline
+Thi{\nn}-t\'{e}ng Kun-\^{o}ng chhut-s\`{\i}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][10mm][l] {85mm} { \rmfamily {
+T\`{u}i S\^{\i}n s\'{o}{\dtr} chhut chin S\^{\i}n, \newline
+T\`{u}i Kng s\'{o}{\dtr} chhut chin Kng, \newline
+L\'{\i} kh\`{o}a{\nn} I b\^{o} hi\^{a}m t\`{u}i Ch\={a}i-sek-l\'{u} t\`{a}n-seng, \newline
+Si\={o}ng-t\`{e} \^{e} S\`{e}ng Ki\'{a}{\nn}, \newline
+B\^{o} t\`{u}i si\={u} ch\={o} chhut-s\`{\i}.
+
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][10mm][l] {85mm} { \rmfamily {
+Ch\`{e}ng thi{\nn}-s\`{a}i ti\pehin{o}h chhi\`{u}{\nn}-koa, \newline
+Ti\pehin{o}h hoa{\nn}-h\'{\i} o-l\'{o} I, \newline
+Thi{\nn}-t\'{e}ng s\`{e}ng-si\^{a}{\nn} l\={a}i-b\={\i}n t\={a}i-ke ti\pehin{o}h g\^{\i}m-si, \newline
+Ch\`{\i}-ko\^{a}n \^{e} s\'{o}{\dtr}-ch\={a}i, \newline
+E\^{n}g-kng kui Ch\'{u} b\^{o} l\={\i}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox[t][10mm][l] {85mm} { \rmfamily {
+Ki\`{u}-ch\'{u} go\'{a}n o-l\'{o} L\'{\i}, \newline
+T\={\i} che j\pehin{\i}t-ch\'{\i} chhut-s\`{\i}, \newline
+I\^{a}-so{\dtr} L\'{\i} mi\^{a} si\={u} chheng-ch\`{a}n \^{e}ng-kng kui L\'{\i}, \newline
+Thi{\nn}-p\={e} \^{e} S\`{e}ng-ki\'{a}{\nn}, \newline
+T\={o} chi\^{a}{\nn} ji\pehin{o}k-th\'{e} chhut-s\`{\i}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{17mm} (H\^{o}) \hspace*{.8mm} \parbox[t][10mm][l] {85mm} { \rmfamily {
+Chhi\'{a}{\nn} l\^{a}i, t\={a}i-ke k\`{e}ng-p\`{a}i I, \newline
+Chhi\'{a}{\nn} l\^{a}i, t\={a}i-ke k\`{e}ng-p\`{a}i I, \newline
+Chhi\'{a}{\nn} l\^{a}i, t\={e}i-ke k\`{e}ng-p\`{a}i I, \newline
+G\'{o}a Ch\'{u} Ki-tok.
+
+}}
+
+\newpage
+\noindent \hspace*{5mm} \rmfamily {
+Ki-tok thi\`{a}{\nn} k\`{a}u-h\={o}e, i\={a} th\`{o}e i hi\`{a}n ka-k\={\i} ( \'{I}-hut-s\'{o}{\dtr} 5:25 ).
+ } 
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Chhi\'{a}{\nn} l\'{a}n t\={a}i-ke t\={o}a sia{\nn} chhi\`{u}{\nn}-koa, \newline
+K\'{a}m-si\={a} o-l\'{o} I\^{a}-h\^{o}-hoa, \newline
+S\`{e}ng Ki\'{a}{\nn} k\`{a}ng-s\`{e} siat-l\pehin{\i}p S\`{e}ng-h\={o}e, \newline
+Si-un ki\`{u} l\^{a}ng si\`{a}-bi\'{a}n ch\={o}e ; \newline
+Si\={o}ng-t\`{e} un-ti\'{a}n k\pehin{e}k t\={o}a b\^{o} p\'{\i}, \newline
+I\^{a}-so{\dtr} \={u}i l\'{a}n l\^{a}i si\={u} s\'{\i}, \newline
+L\'{a}n n\={a} kh\`{o} I chi\={u} l\'{o}ng bi\'{a}n kia{\nn}, \newline
+K\`{a}u b\'{e} \'{u}n-t\`{a}ng \={o}e khah-i\^{a}{\nn}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Si\={o}ng-t\`{e} S\`{e}ng-h\={o}e pi\`{a}n-m\'{o}a thi{\nn}-\={e}, \newline
+Go\^{a}n-p\'{u}n l\'{a}n l\^{a}ng s\={\i} ch\pehin{\i}t ke, \newline
+Hoa{\nn}-h\'{\i} ch\`{\i}n-j\pehin{\i}p I\^{a}-so{\dtr} S\`{e}ng-h\={o}e, \newline
+Kap P\={e} Si\={o}ng-t\`{e} sa{\nn} kau-p\^{o}e ; \newline
+Si\={o}ng-t\`{e} S\`{e}ng-h\={o}e b\^{o} l\={u}n l\'{o}-i\`{u}, \newline
+O\'{a}-kh\`{o} Ki-tok chi\={u} tit ki\`{u}, \newline
+H\`{u}-k\`{u}i p\^{\i}n-chi\={a}n b\^{o} hun p\'{\i}-chh\'{u}, \newline
+Thi{\nn}-\={e} ch\'{\i}-\={u} ch\pehin{\i}t \^{e} Ch\'{u}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox [t][25mm][l] {65mm} { \rmfamily {
+Go\^{a}n-p\'{u}n Ch\'{u} ti\`{a}m b\^{e}ng-kiong S\`{e}ng-s\'{o}{\dtr}, \newline
+Kam-go\={a}n k\`{a}ng-s\`{e} si\={u} kan-kh\'{o}{\dtr}, \newline
+Ch\'{\i}n-ki\`{u} j\^{\i}n-l\={u}i thoat-l\={\i} s\'{\i}-ch\={o}e, \newline
+I\'{n}-chh\={o}a ch\`{e}ng-l\^{a}ng j\pehin{\i}p S\`{e}ng-h\={o}e, \newline
+S\`{e}ng S\^{\i}n m\^{\i}-j\pehin{\i}t p\'{o}-h\={o}{\dtr} chi\`{a}u-k\`{o}{\dtr}, \newline
+Ch\={a}n l\'{a}n h\'{o}-t\'{a}{\nn} ki\^{a}{\nn} thi{\nn}-l\={o}{\dtr}, \newline
+T\`{e} Ch\'{u} kha-p\={o}{\dtr} th\`{a}n I l\^{a}i ki\^{a}{\nn}, \newline
+K\`{a}u b\'{e} \'{u}n-t\`{a}ng j\pehin{\i}p thi{\nn}-si\^{a}{\nn}.
+
+
+}}
+
+\newpage
+\noindent \rmfamily {
+Thi{\nn}-s\`{a}i k\={a} in k\'{o}ng, B\pehin{o}h-tit kia{\nn}, in-\={u}i g\'{o}a p\`{o} l\'{\i}n t\={o}a hoa{\nn}-h\'{\i} \^{e} h\'{o} siau-sit (L\={o}{\dtr}-ka 2:10). 
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} \hspace*{.8mm} \parbox[t][5mm][l] {75mm} {\rmfamily {
+Chhi\'{a}{\nn} thia{\nn} thi{\nn}-s\`{a}i hoa{\nn}-h\'{\i} \^{e} sia{\nn}, \newline
+Ki\`{u}-ch\'{u} chhut-s\`{\i} T\={a}i-p\pehin{\i}t \^{e} si\^{a}{\nn}, \newline
+}}
+\vspace*{6mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][5mm][l] {75mm} {\rmfamily {
+Che i\={u}{\nn} \^{e} sia{\nn} s\pehin{\i}t-ch\={a}i h\'{o} thia{\nn}, \newline
+L\'{a}n ti\pehin{o}h o-l\'{o} Ki\`{u}-ch\'{u} chun -mi\^{a}.
+}}
+\vspace*{6mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][5mm][l] {75mm} { \rmfamily {
+I s\={\i} Si\={o}ng-t\`{e} t\pehin{o}k-si{\nn} \^{e} Ki\'{a}{\nn}, \newline
+L\'{a}n ti\pehin{o}h k\`{e}ng-\`{u}i Ki\`{u}-ch\'{u} chun-mi\^{a}. 
+
+}}
+\vspace*{6mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][5mm][l] {75mm} { \rmfamily {
+Thi{\nn}-s\`{a}i tho\^{a}n k\'{o}ng "L\'{\i}n l\'{o}ng bi\'{a}n kia{\nn}, \newline
+G\'{o}a p\`{o} Ki\`{u}-ch\'{u} ch\'{\i}n-ki\`{u} t\={o}a-mi\^{a}."
+
+}}
+\vspace*{6mm} \newline
+\hspace*{20mm} 4. \hspace*{.8mm} \parbox[t][5mm][l] {75mm} {\rmfamily {
+Ch\^{o}-l\={a}i E{\nn}-\'{a} pau-p\`{o}{\dtr}  ch\`{o}e h\={o}, \newline
+Beh ki\`{u} s\`{e}-kan, h\={o}{\dtr} l\^{a}ng o\'{a}-kh\`{o}.
+
+}}
+\vspace*{6mm} \newline
+\hspace*{20mm} 5. \hspace*{.8mm} \parbox[t][5mm][l] {75mm} { \rmfamily {
+Thi{\nn}-t\'{e}ng thian-kun t\^{a}ng sim o-l\'{o}, \newline
+T\={o}e-b\={\i}n ch\`{e}ng l\^{a}ng t\={a}i-ke h\^{o}-h\'{o}.
+}}
+%\newpage
+%\noindent \vspace*{-10mm} \newline
+\vspace*{6mm} \newline
+\hspace*{20mm} 6. \hspace*{.8mm} \parbox[t][5mm][l] {75mm} { \rmfamily {
+I h\={o}{\dtr} Si\={o}ng-t\`{e} l\pehin{\i}p ch\`{o}e Ki\`{u}-ch\'{u}, \newline
+Ki\`{u} l\^{a}ng \'{e}ng-o\pehin{a}h t\^{n}g-t\^{n}g k\'{u}-k\'{u}.
+}}
+\vspace*{6mm} \newline
+\hspace*{20mm} 7. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+Ta{\nn} l\'{a}n t\={a}i-ke ti\pehin{o}h \pehin{o}h thi{\nn}-s\`{a}i, \newline
+P\`{o}-i\^{o}ng hok-im chh\={o}a l\^{a}ng k\`{e}ng-p\`{a}i, \newline
+Si\^{o}ng-si\^{o}ng p\`{o} l\^{a}ng thia{\nn} Ch\'{u} \^{e} sia{\nn}, \newline
+\`{N}g-b\={a}ng t\pehin{a}k l\^{a}ng t\`{e} Ch\'{u} l\^{a}i ki\^{a}{\nn}.
+
+}}
+\vspace*{6mm} \newline
+\vspace*{6mm} \newline
+\hspace*{17mm} (H\^{o}) \hspace*{.8mm} \parbox[t][5mm][l] {75mm} { \rmfamily {
+Hoa{\nn}-h\'{\i}, hoa{\nn}-h\'{\i}, hoa{\nn}-h\'{\i}, hoa{\nn}-h\'{\i}, \newline
+Thian-kok Kun-\^{o}ng kim-j\pehin{\i}t chhut-s\`{\i}.
+}}
+
+\newpage
+\noindent \rmfamily {
+Si-phian 127: 1-5
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} {\rmfamily {
+Chh\`{u} n\={a} \={m}-s\={\i} Ch\'{u} k\={a} l\'{a}n kh\'{\i}, \newline
+\hspace*{2mm} Chi\={u} kh\'{\i} s\={\i} phah-s\'{n}g kang ; \newline
+Si\^{a}{\nn}, n\={a} \={m}-s\={\i} Ch\'{u} si\'{u} chi\^{a}u-p\={\i}, \newline
+\hspace*{2mm} Chi\={u} l\^{a}ng k\`{o}{\dtr} si\^{a}{\nn} khang-khang.
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+L\'{\i}n ch\'{a}-ch\'{a} kh\'{\i}, b\^{o}a k\`{a}u \`{a}m-m\^{\i}, \newline
+\hspace*{2mm} Th\`{a}n-chi\pehin{a}h s\={\i} b\^{o}-chh\'{a}i kang ; \newline
+Teh kh\`{u}n \^{e} s\^{\i}, Ch\'{u} chiong h\'{o}-m\pehin{\i}h, \newline
+\hspace*{2mm} H\={o}{\dtr} I s\'{o}{\dtr} thi\`{a}{\nn} \^{e} l\^{a}ng.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+Ki\'{a}{\nn}-sun ch\={o}e-ch\={o}e t\={\i} chh\`{u} ch\'{e}ng-ch\^{o}e, \newline
+\hspace*{2mm} N\'{a} ch\'{u}n i\'{o}ng-s\={u} \^{e} ch\`{\i}{\nn} ; \newline
+G\'{\i}n-n\'{a} t\={o}a s\`{o}e  s\={\i} Ch\'{u} p\'{o}-p\`{o}e, \newline
+\hspace*{2mm} S\={\i} l\'{a}n s\'{a}n-gi\pehin{a}p hok-kh\`{\i}.
+}}
+
+\newpage
+\noindent \rmfamily {
+I b\^{o} t\={\i}-chia, \'{\i}-keng koh-o\pehin{a}h (L\={o}{\dtr}-ka 24:6).
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} {\rmfamily {
+Chhun-thi{\nn} chi\'{a}u-chiah l\'{o}ng hoa{\nn}-h\'{\i}, \newline
+Sim-s\^{\i}n kho\`{a}i-l\pehin{o}k teh chhi\`{u}{\nn}-koa, \newline
+Ch\'{u} Ki-tok \'{\i}-keng koh-o\pehin{a}h.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+P\`{a}i-t\^{n}g cheng-sia{\nn} teh hi\'{a}ng-li\={a}ng, \newline
+P\`{o} che siau-sit h\'{o} koh t\={o}a, \newline
+Ch\'{u} Ki-tok \'{\i}-keng koh-o\pehin{a}h.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][10mm][l] {75mm} { \rmfamily {
+Ta{\nn} l\'{a}n t\={a}i-ke l\^{a}i g\^{\i}m-si, \newline
+Chhun-thi{\nn} hoa{\nn}-h\'{\i} sim khui-khoah, \newline
+Ch\'{u} Ki-tok \'{\i}-keng koh-o\pehin{a}h.
+
+}}
+
+\newpage
+\noindent \hspace*{5mm} \rmfamily {
+T\pehin{o}k-t\pehin{o}k \={m}-s\={\i} g\'{o}a \^{e} \`{\i}-s\`{u}, s\={\i} L\'{\i} \^{e} \`{\i}-s\`{u} ti\pehin{o}h-chi\^{a}{\nn} (L\={o}{\dtr}-ka 22:42)
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} {\rmfamily {
+Chhut-j\pehin{\i}t l\pehin{o}h-h\={o}{\dtr} s\={\i} Ch\'{u} s\'{o}{\dtr} t\={e}ng, \newline
+N\={n}g h\={a}ng l\'{o}ng s\={\i} hoe-b\pehin{a}k khi\`{a}m-\={e}ng, \newline
+Iu-b\={u}n, hoa{\nn}-h\'{\i} l\'{o}ng \={u} l\={\i}-ek, \newline
+I\'{u}{\nn}-chh\={\i} l\^{e}ng-h\^{u}n, kian-k\`{o}{\dtr} s\`{\i}n-tek, \newline
+S\`{u}-hok, k\`{a}ng chai, L\'{\i} s\'{o}{\dtr} ch\`{u}-ti\={a}{\nn}, \newline
+Thi{\nn} P\={e} go\={a}n L\'{\i} ch\'{\i}-\`{\i} tit chi\^{a}{\nn}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} { \rmfamily {
+I\'{u}-h\`{a}u \^{e} ki\'{a}{\nn} ki\'{a}m \={o}e p\`{\i}{\nn}-b\={\i}n, \newline
+Si\={u}-kh\`{\i} l\^{a}i hi\^{a}m s\'{o}{\dtr} thi\`{a}{\nn} h\={u}-chhin, \newline
+Thi{\nn} P\={e} h\={o}{\dtr} g\'{o}a i\'{u}-h\`{a}u \^{e} sim, \newline
+Thi\`{a}{\nn} L\'{\i}, k\`{e}ng L\'{\i}, s\`{\i}n L\'{\i} n\'{a} chhim, \newline
+Chiong-l\^{a}i k\'{e}ng-h\'{o}ng sui-ji\^{a}n b\^{o} ti\={a}{\nn}, \newline
+Thi{\nn} P\={e} go\={a}n L\'{\i} ch\'{\i}-\`{\i} tit chi\^{a}{\nn}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} { \rmfamily {
+S\`{\i}{\nn}-mi\={a} g\'{o}a chai s\={\i} L\'{\i} s\'{o}{\dtr} s\`{u}, \newline
+Put l\={u}n h\'{o}, ph\'{a}i{\nn}, b\^{o} hi\^{a}m k\'{e}ng-g\={u}, \newline
+S\'{\i} \^{e} \`{\i}m-\'{n}g jia g\'{o}a \^{e} s\^{\i}, \newline
+Kian-k\`{o}{\dtr} \`{n}g-b\={a}ng, g\'{o}a sim b\^{o} g\^{\i}, \newline
+H\pehin{e}k o\pehin{a}h, h\pehin{e}k s\'{\i}, g\'{o}a l\'{o}ng b\^{o} kia{\nn}, \newline
+Thi{\nn} P\={e} go\={a}n L\'{\i} ch\'{\i}-\`{\i} tit chi\^{a}{\nn}.
+
+}}
+
+\newpage
+\noindent \hspace*{5mm} \rmfamily {
+Hok-im soan-th\pehin{o}k
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} {\rmfamily {
+E\^{n}g-kng kui ch\`{\i}-ko\^{a}n \^{e} Ch\'{u}.
+}}
+\newpage
+\noindent \hspace*{5mm} \rmfamily {
+Si\={o}ng-\^{e}ng
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} {\rmfamily {
+E\^{n}g-kng kui S\`{e}ng P\={e} Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng S\`{e}ng Ki\'{a}{\nn}, S\`{e}ng S\^{\i}n, \newline
+Sam-\={u}i-it-th\'{e},\newline
+Ch\'{a} t\={\i}-teh, hi\={a}n-ch\={a}i t\={\i}-teh, \newline
+Chiong-l\^{a}i i\={a} \'{e}ng-o\'{a}n t\={\i}-teh, \newline
+B\^{u}-ki\^{o}ng b\^{u}-ch\={\i}n. A-men.
+}}
+\newpage
+\noindent \hspace*{5mm} \rmfamily {
+E\^{n}g-kng si\={o}ng
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} {\rmfamily {
+E\^{n}g-kng kui S\`{e}ng P\={e} Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng S\`{e}ng Ki\'{a}{\nn}, S\`{e}ng S\^{\i}n, \newline
+Sam-\={u}i-it-th\'{e}, \newline
+Ch\'{a} t\={\i}-teh, hi\={a}n-ch\={a}i t\={\i}-teh, \newline
+Chiong-l\^{a}i i\={a} \'{e}ng-o\'{a}n t\={\i}-teh, \newline
+B\^{u}-ki\^{o}ng b\^{u}-ch\={\i}n. A-men.
+}}
+\newpage
+\noindent \rmfamily {
+O-l\'{o} chun-k\`{u}i, \^{e}ng-kng, ko\^{a}n-s\`{e} l\'{o}ng kui h\={o}{\dtr} ch\={e} t\={\i} ch\={o}-\={u}i \^{e}, kap I\^{u}{\nn}-ko k\`{a}u t\={a}i-t\={a}i b\^{o}-ch\={\i}n (Kh\'{e}-s\={\i}-li\pehin{o}k 5:13).
+ }
+\vspace*{12mm} \newline
+\hspace*{20mm} 1. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} {\rmfamily {
+E\^{n}g-kng kui t\={\i} S\`{e}ng P\={e} Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng S\`{e}ng Ki\'{a}{\nn} Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng kui t\={\i} S\`{e}ng S\^{\i}n Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng kui Sam-\={u}i-it-th\'{e}, \newline
+E\^{n}g-kng, \^{e}ng-kng, \^{e}ng-kng Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng Ch\'{u} k\`{a}u b\={a}n-b\={a}n s\`{e}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 2. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} { \rmfamily {
+E\^{n}g-kng kui t\={\i} thi\`{a}{\nn} l\'{a}n \^{e} Ch\'{u}, \newline
+S\'{o}e l\'{a}n ch\={o}e-k\`{o}a b\^{o} h\^{a}-chh\^{u}, \newline
+E\^{n}g-kng kui t\={\i} si\pehin{o}k l\'{a}n \^{e} Ch\'{u}, \newline
+Kap Ch\'{u} ch\`{o}e \^{o}ng b\={a}n-n\^{\i} k\'{u}, \newline
+E\^{n}g-kng, \^{e}ng-kng, \^{e}ng-kng Si\={o}ng-t\`{e}, \newline
+E\^{n}g-kng Ch\'{u} th\`{o}e l\'{a}n hi\`{a}n-ch\`{e}.
+
+}}
+\vspace*{12mm} \newline
+\hspace*{20mm} 3. \hspace*{.8mm} \parbox[t][20mm][l] {75mm} { \rmfamily {
+E\^{n}g-kng o-l\'{o} k\`{a}u b\={a}n-b\={a}n n\^{\i}, \newline
+Ch\`{e}ng thi{\nn}-s\`{a}i chok-g\pehin{a}k g\^{\i}m-si, \newline
+Kok, ko\^{a}n, \^{e}ng-kng b\^{u}-ch\={\i}n b\^{u}-ki\^{o}ng, \newline
+O-l\'{o} chhiong-m\'{o}a \'{u}-ti\={u} tiong, \newline
+E\^{n}g-kng, \^{e}ng-kng, \^{e}ng-kng Si\={o}ng-t\`{e}, \newline
+B\={a}n \^{o}ng \^{e} O\^{n}g k\`{a}u b\={a}n-s\`{e}.
+
+}}
+
+\end{document}
