@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage{stackengine}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pbsi}
+\usepackage{lmodern}
+%\usepackage{tgbonum}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[a5paper]{geometry}
+%\usepackage[a5paper, inner=2cm,outer=2.8cm, twoside, bottom=3.2cm]{geometry}
+%\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{math} 
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary[decorations.text]
+
+
+%\newwrite\file
+%\immediate\openout\file=myfilename.txt
+%\immediate\write\file{A line of text to write to the file}
+%\immediate\write\file{Another line of text to write to the file}
+%\closeout\file
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand*{\vertchar}[2][0pt]{%
+  \tikz[
+    inner sep=1pt,
+    shorten >=-.15ex,
+    shorten <=-.15ex,
+    line cap=round,
+    baseline=(c.base),
+  ]\draw
+    (0,0) node (c) {#2}
+    ($(c.north)+(#1,0)$) -- ($(c.north)+(#1,0)$);%
+}
+
+
+\makeatletter
+\newcommand{\dotr}[1]{%
+  \mathpalette\@dotr{#1}%
+}
+
+\newcommand*{\@dotr}[2]{%
+  % #1: math style (\displaystyle, ..., \scriptscriptstyle)
+  % #2: argument of \dotr
+  \sbox0{$\m@th#1#2$}%
+  \usebox{0}%
+  % simulating a superscript
+  %\raisebox{\dimexpr\ht0-\height}{$\m@th#1\addvbuffer[-1ex 0.9ex]{.}}%
+  \raisebox{3.5pt}{$\m@th#1\@smallbullet#1\bullet$}%
+  \kern\scriptspace
+}
+\newcommand*{\@smallbullet}[2]{%
+  \scalebox{.3}{$\m@th#1#2$}%
+}
+\makeatother
+    
+\newcommand*{\siin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\nn}{\textsuperscript{n}}
+\newcommand*{\pehinbsiit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{-2pt}\raisebox{2.5pt}{\begin{rotate}{-35}\small\ttfamily\char'15\end{rotate}}}{#1}}
+\newcommand*{\pehinsfit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehinrmit}[1]{\stackinset{c}{}{b}{5.5pt}{\hspace{2.5pt}\raisebox{2pt}{\small\ttfamily\char'15}}{#1}}
+\newcommand*{\pehin}[1]{\stackinset{c}{}{b}{5.5pt}{\small\ttfamily\char'15}{#1}}
+\newcommand*{\pehinbf}[1]{\stackinset{c}{}{b}{5.5pt}{\ttfamily\char'15}{#1}}
+
+\newcommand*{\dtr}{\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrit}{\hspace{.7pt}\raisebox{3.5pt}{$\scalebox{.3}{$\bullet$}$}}
+\newcommand*{\dtrbf}{\raisebox{3.5pt}{$\scalebox{.5}{$\bullet$}$}}
+
+\linespread{1.5}%\selectfont
+
+\begin{document}
+
+\pagenumbering{gobble} 
+\pagenumbering{arabic}
+
+%\the\fontdimen2\font
+%\the\fontdimen3\font
+{\ttfamily
+%\the\fontdimen2\font
+%\the\fontdimen3\font
+\par
+\newdimen\origiwspc
+\newdimen\origiwstr
+\origiwspc=\fontdimen2\font
+\origiwstr=\fontdimen3\font
+\fontdimen2\font=2.6pt
+\fontdimen3\font=1em
+I\^{a}-h\^{o}-hoa ah, ch\'{a}-kh\'{\i}-s\^{\i} L\'{\i} \={o}e thia{\nn} g\'{o}a \^{e} sia{\nn}...g\'{o}a beh t\`{u}i L\'{\i} p\^{a}i-li\siin{a}t g\'{o}a \^{e} sim-\`{\i}...Si-Phian 5:3 \\
+\par
+I\^{a}-h\^{o}-hoa, ch\'{a}-kh\'{\i}-s\^{\i} L\'{\i} \={o}e thia{\nn} g\'{o}a \^{e} sia{\nn}. Ch\'{a}-kh\'{\i}-s\^{\i}  g\'{o}a beh t\`{u}i L\'{\i} p\^{a}i-li\siin{a}t g\'{o}a \^{e} k\^{\i}-t\'{o}. \`{N}g-b\={a}ng  L\'{\i} \`{\i}n g\'{o}a , g\'{o}a  beh j\siin{\i}p L\'{\i} \^{e} S\`{e}ng-ti\={a}n. Si\`{a}u-li\={a}m L\'{\i} k\siin{e}k t\={o}a \^{e} j\^{\i}n-ch\^{u}. G\'{o}a sim k\`{e}ng-khi\^{a}n, sim k\`{e}ng-khi\^{a}n. G\'{o}a beh t\`{u}i L\'{\i} \^{e} S\`{e}ng-ti\={a}n k\`{e}ng-p\`{a}i L\'{\i}. G\'{o}a beh t\`{u}i L\'{\i} \^{e} S\`{e}ng-ti\={a}n k\`{e}ng-p\`{a}i L\'{\i}.\\
+\fontdimen2\font=\origiwspc
+\fontdimen3\font=\origiwstr
+}
+
+
+{\rmfamily %\ttfamily%\sffamily
+\par
+SI-PHIAN 39\\
+\par
+%\mbox{\Huge39}
+  \newdimen\origiwspc%
+  \newdimen\origiwstr%
+  \origiwspc=\fontdimen2\font% original inter word space
+  \origiwstr=\fontdimen3\font% original inter word stretch
+  \fontdimen3\font=\origiwstr% (original) inter word stretch
+%  \fontdimen2\font=\origiwspc%1em% inter word space
+  \fontdimen2\font=.6em% inter word space
+  
+G\'{o}a bat k\'{o}ng, G\'{o}a beh k\'{\i}n-s\={\i}n g\'{o}a \^{e} l\={o}{\dtr}, Bi\'{a}n-tit \={e}ng g\'{o}a \^{e} ch\pehin{\i}h ho\={a}n-ch\={o}e; Ph\'{a}i{\nn}-l\^{a}ng t\={\i} g\'{o}a b\={\i}n-ch\^{e}ng \^{e} s\^{\i}, G\'{o}a beh iok-sok g\'{o}a \^{e} chh\`{u}i chhin-chhi\={u}{\nn} b\'{e}-k\={a}-kiu{\nn}. \textsuperscript{2}G\'{o}a ch\={e}ng-ch\={e}ng b\^{o} sia{\nn}, li\^{a}n h\'{o}-\={o}e i\pehin{a}h b\^{o} k\'{o}ng-chhut chh\`{u}i; G\'{o}a \^{e} iu-b\={u}n chi\={u} gi\^{a}-{-}kh\'{\i}-l\^{a}i. \textsuperscript{3}G\'{o}a \^{e} sim t\={\i} g\'{o}a \^{e} l\={a}i-b\={\i}n ji\pehin{a}t-ji\pehin{a}t; G\'{o}a ch\={e}ng-ch\={e}ng si\={u}{\nn} \^{e} s\^{\i}, h\'{e} chi\={u} t\pehin{o}h-{-}kh\'{\i}-l\^{a}i; G\'{o}a chi\={u} \={e}ng ch\pehin{\i}h l\^{a}i k\'{o}ng: \textsuperscript{4}I\^{a}-h\^{o}-hoa ah, ki\^{u} L\'{\i} h\={o}{\dtr} g\'{o}a chai p\'{u}n-sin \^{e} kiat-ki\pehin{o}k, Kap g\'{o}a n\^{\i}-h\`{e} \^{e} si\`{a}u-gi\pehin{a}h j\={o}a-ch\={o}e; H\={o}{\dtr} g\'{o}a chai lo\'{a}n-ji\pehin{o}k k\`{a}u ch\'{a}i{\nn}-i\={u}{\nn}. \textsuperscript{5}L\'{\i} h\={o}{\dtr} g\'{o}a \^{e} j\pehin{\i}t-ch\'{\i} chhin-chhi\={u}{\nn} ch\pehin{\i}t-pa-chi\'{u}{\nn}, G\'{o}a it-seng \^{e} n\^{\i}-h\`{e}, t\={\i} L\'{\i} \^{e} b\={\i}n-ch\^{e}ng chhin-chhi\={u}{\nn} b\^{o}; T\pehin{a}k-l\^{a}ng khi\={a}-ch\={a}i \^{e} s\^{\i}, chin-chi\`{a}{\nn} l\'{o}ng s\={\i} khang-khang. \textsuperscript{6}S\`{e}-kan l\^{a}ng ki\^{a}{\nn}-ch\`{o}e s\pehin{\i}t-ch\={a}i chhin-chhi\={u}{\nn} i\'{a}{\nn}; In b\^{o}-\^{e}ng chhih-chhih, chin-chi\`{a}{\nn} b\^{o} chh\'{a}i-kang; I s\'{o}{\dtr} chek-ch\={u}-{-}\^{e}, \={m}-chai chiong-l\^{a}i ch\={\i}-ch\={u}i tit-{-}kh\`{\i}. \textsuperscript{7}Ch\'{u} ah, g\'{o}a ta{\nn} th\`{e}ng-h\={a}u s\'{\i}m-m\pehin{\i}h? G\'{o}a \^{e} \`{n}g-b\={a}ng ch\={a}i-t\={\i} L\'{\i}. \textsuperscript{8}Ki\^{u} L\'{\i} ki\`{u} g\'{o}a thoat-l\={\i} g\'{o}a it-chh\`{e} \^{e} k\`{e}-sit; \={M}-thang h\={o}{\dtr} g\'{o}a si\={u} g\={o}ng-l\^{a}ng \^{e} l\^{e}ng-ji\pehin{o}k. \textsuperscript{9}G\'{o}a ch\={e}ng-ch\={e}ng b\^{o} khui-chh\`{u}i; In-\={u}i s\={\i} L\'{\i} ch\`{o}e \^{e}. \textsuperscript{10}L\'{\i} s\'{o}{\dtr} k\`{a}ng \^{e} chek-ho\pehin{a}t ki\^{u} L\'{\i} k\={a}  g\'{o}a t\^{u}-{-}kh\`{\i}; In-\={u}i L\'{\i} \^{e} chhi\'{u} \^{e}  tok-chek, g\'{o}a chi\={u} siau-bi\pehin{a}t. \textsuperscript{11}L\'{\i} in-\={u}i l\^{a}ng \^{e} ch\={o}e-ok, k\'{e}ng-k\`{a}i i \^{e} s\^{\i}, H\={o}{\dtr} i s\'{o}{\dtr} hoa{\nn}-h\'{\i}-{-}\^{e} siau-bi\pehin{a}t, chhin-chhi\={u}{\nn} ti\pehin{o}h chi\`{u}-th\^{a}ng; S\`{e}-kan l\^{a}ng chin-chi\`{a}{\nn} s\={\i} khang-khang. \textsuperscript{12}I\^{a}-h\^{o}-hoa ah, ki\^{u} L\'{\i} thia{\nn} g\'{o}a \^{e} k\^{\i}-t\'{o}, \`{a}{\nn} h\={\i}-khang thia{\nn} g\'{o}a \^{e} ki\^{u}-ki\`{o}. G\'{o}a l\^{a}u b\pehin{a}k-s\'{a}i, ki\^{u} L\'{\i} \={m}-thang b\^{o} chhut sia{\nn}; In-\={u}i g\'{o}a t\={\i} L\'{\i} \^{e} b\={\i}n-ch\^{e}ng s\={\i} chhut-g\={o}a-l\^{a}ng, S\={\i} ki\`{a}-kha-{-}\^{e}, chhin-chhi\={u}{\nn} g\'{o}a \^{e} li\pehin{a}t-ch\'{o}{\dtr} ch\pehin{\i}t-poa{\nn}-i\={u}{\nn}. \textsuperscript{13}Ki\^{u} L\'{\i} khoan-i\^{o}ng g\'{o}a, h\={o}{\dtr} g\'{o}a i\'{a}u-b\={e} kh\`{\i} l\^{a}i kui t\={\i} b\^{o} \^{e} t\={a}i-seng, Thang tit-ti\pehin{o}h s\'{o}ng-kho\`{a}i.\\%4 s\`{\i}{\nn}-mi\={a} b\^{o} k\'{u}-t\^{n}g 13 h\pehin{o}k-t\`{o} kh\`{u}i-l\pehin{a}t.
+  \fontdimen2\font=\origiwspc% (original) inter word space
+  \fontdimen3\font=\origiwstr% (original) inter word stretch
+
+
+}
+{\rmfamily
+\par 
+Si-phian 27\\
+\par
+I\^{a}-h\^{o}-hoa s\={\i} g\'{o}a \^{e} kng, s\={\i} g\'{o}a \^{e} ch\'{\i}n-ki\`{u}; g\'{o}a beh kia{\nn} ch\={\i}-ch\={u}i? I\^{a}-h\^{o}-hoa s\={\i} g\'{o}a o\pehin{a}h-mi\={a} \^{e} kh\`{u}i-l\pehin{a}t; g\'{o}a beh kia{\nn} ch\={\i}-ch\={u}i? \textsuperscript{2}Hiah \^{e} ch\`{o}e ph\'{a}i{\nn} \^{e} l\^{a}ng, chi\={u}-s\={\i} g\'{o}a \^{e} ki\^{u}-si\^{u}, g\'{o}a \^{e} t\`{u}i-t\pehin{e}k, l\^{a}i kong-kek g\'{o}a, beh chi\pehin{a}h g\'{o}a \^{e} bah, Hit-s\^{\i} in chi\={u} ti\pehin{o}h-tak po\pehin{a}h-t\'{o}. \textsuperscript{3}Sui-ji\^{a}n \={u} kun-peng chat-i\^{a}{\nn}, beh kong-kek g\'{o}a, G\'{o}a \^{e} sim i\pehin{a}h b\^{o} kia{\nn}-hi\^{a}{\nn}; Sui-ji\^{a}n heng-kh\'{\i} to-peng kong-kek g\'{o}a, G\'{o}a i\^{u}-go\^{a}n ch\={u}-ch\={a}i. \textsuperscript{4}\={U} ch\pehin{\i}t h\={a}ng s\={u} g\'{o}a bat t\`{u}i I\^{a}-h\^{o}-hoa ki\^{u}, g\'{o}a i\^{u}-go\^{a}n t\`{\i}-\`{\i} \`{a}i tit-ti\pehin{o}h; Chi\={u}-s\={\i} ch\pehin{\i}t-s\`{\i}-l\^{a}ng khi\={a}-kh\'{\i} I\^{a}-h\^{o}-hoa \^{e} chh\`{u}, Kh\`{o}a{\nn} I \^{e} \^{e}ng-kng, si\`{a}u-li\={a}m I \^{e} ti\={a}n. \textsuperscript{5}In-\={u}i ho\={a}n-l\={a}n \^{e} j\pehin{\i}t, I beh \`{a}m-ch\={\i}\hspace*{.5pt}{\nn} p\'{o}-h\={o}{\dtr} g\'{o}a t\={\i} I \^{e} ti\`{u}{\nn}-\^{u}i-l\={a}i; Chiong g\'{o}a kh\`{n}g t\={\i} I p\`{o}{\dtr}-p\^{\i}{\nn} kh\`{a}m-b\pehin{a}t \^{e} s\'{o}{\dtr}-ch\={a}i; K\'{u}-kh\'{\i} g\'{o}a t\={\i} chi\pehin{o}h-p\^{o}a{\nn}-t\'{e}ng. \textsuperscript{6}Ta{\nn} g\'{o}a \^{e} th\^{a}u-khak tit-ti\pehin{o}h ki\pehin{a}h-kh\'{\i}, khah-ko\^{a}i{\nn} t\={\i} g\'{o}a s\`{\i}-b\={\i}n \^{e} t\`{u}i-t\pehin{e}k; G\'{o}a beh t\={\i} I \^{e} p\`{o}{\dtr}-p\^{\i}{\nn} hi\`{a}n hoa{\nn}-h\'{\i} \^{e} ch\`{e}; G\'{o}a beh g\^{\i}m-si, i\pehin{a}h beh chhi\`{u}{\nn}-koa o-l\'{o} I\^{a}-h\^{o}-hoa. \textsuperscript{7}I\^{a}-h\^{o}-hoa ah, g\'{o}a chhut-sia{\nn} ki\^{u}-ki\`{o} \^{e} s\^{\i}, ki\^{u} L\'{\i} thia{\nn}; Koh ki\^{u} L\'{\i} l\^{\i}n-b\'{\i}n g\'{o}a, \`{\i}n g\'{o}a. \textsuperscript{8}L\'{\i} bat k\'{o}ng, L\'{\i}n ti\pehin{o}h him-b\={o}{\dtr} k\`{\i}{\nn} G\'{o}a \^{e} b\={\i}n; hit-s\^{\i} g\'{o}a \^{e} sim t\`{u}i L\'{\i} k\'{o}ng, I\^{a}-h\^{o}-hoa ah, g\'{o}a beh him-b\={o}{\dtr} k\`{\i}{\nn} L\'{\i} \^{e} b\={\i}n. \textsuperscript{9}\={M}-thang t\`{u}i g\'{o}a ng L\'{\i} \^{e} b\={\i}n; \={M}-thang si\={u}-kh\`{\i} l\^{a}i k\'{o}a{\nn} L\'{\i} \^{e} l\^{o}{\dtr}-p\pehin{o}k; L\'{\i} p\^{e}ng-s\`{o}{\dtr} s\={\i} ch\`{o}e g\'{o}a \^{e} pang-ch\={a}n; Ki\`{u} g\'{o}a \^{e} Si\={o}ng-t\`{e} ah, \={m}-thang p\`{a}ng-sak g\'{o}a, i\pehin{a}h \={m}-thang l\={\i}-khui g\'{o}a. \textsuperscript{10}In-\={u}i p\={e}-b\'{u} l\={\i}-khui g\'{o}a, I\^{a}-h\^{o}-hoa beh siu-li\^{u} g\'{o}a. \textsuperscript{11}I\^{a}-h\^{o}-hoa ah, ki\^{u} L\'{\i} \={e}ng L\'{\i} \^{e} t\={o}-l\={o}{\dtr} ch\'{\i}-s\={\i} g\'{o}a; In-\={u}i g\'{o}a \^{e} t\`{u}i-t\pehin{e}k \^{e} i\^{a}n-k\`{o}{\dtr}, chh\={o}a g\'{o}a t\={\i} p\^{\i}\hspace*{.5pt}{\nn}-th\'{a}{\nn} \^{e} l\={o}{\dtr}. \textsuperscript{12}\={M}-thang chiong g\'{o}a kau h\={o}{\dtr} t\`{u}i-t\pehin{e}k, chi\^{a}{\nn} in \^{e} sim-go\={a}n; In-\={u}i l\={a}m-s\'{a}m kan-ch\`{e}ng \^{e} l\^{a}ng kh\'{\i}-l\^{a}i kong-kek g\'{o}a, in i\pehin{a}h th\`{o}{\dtr}-chhut hiong-ok \^{e} \={o}e. \textsuperscript{13}G\'{o}a n\={a} \={m}-s\`{\i}n t\={\i} o\pehin{a}h-l\^{a}ng \^{e} t\={o}e tit-ti\pehin{o}h kh\`{o}a{\nn}-k\`{\i}{\nn} I\^{a}-h\^{o}-hoa \^{e} un-h\={u}i, Chi\={u} tek-khak cho\pehin{a}t-b\={a}ng. \textsuperscript{14}Ti\pehin{o}h th\`{e}ng-h\={a}u I\^{a}-h\^{o}-hoa, Ti\pehin{o}h i\'{o}ng-ch\`{o}ng, l\'{\i} \^{e} sim ti\pehin{o}h kian-k\`{o}{\dtr} ; S\pehin{\i}t-ch\={a}i ti\pehin{o}h th\`{e}ng-h\={a}u I\^{a}-h\^{o}-hoa.\\
+}
+
+
+\end{document}
